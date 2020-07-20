@@ -5335,11 +5335,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rina lerner\\source\\repos\\BrixBank\\Account.WebApi\\Account.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.WebApi\\Account.WebApi.csproj",
       "projectName": "Account.WebApi",
-      "projectPath": "C:\\Users\\rina lerner\\source\\repos\\BrixBank\\Account.WebApi\\Account.WebApi.csproj",
+      "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.WebApi\\Account.WebApi.csproj",
       "packagesPath": "C:\\Users\\rina lerner\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rina lerner\\source\\repos\\BrixBank\\Account.WebApi\\obj\\",
+      "outputPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rina lerner\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5355,11 +5355,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\rina lerner\\source\\repos\\BrixBank\\Account.Data\\Account.Data.csproj": {
-              "projectPath": "C:\\Users\\rina lerner\\source\\repos\\BrixBank\\Account.Data\\Account.Data.csproj"
+            "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Data\\Account.Data.csproj": {
+              "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Data\\Account.Data.csproj"
             },
-            "C:\\Users\\rina lerner\\source\\repos\\BrixBank\\Account.Services\\Account.Services.csproj": {
-              "projectPath": "C:\\Users\\rina lerner\\source\\repos\\BrixBank\\Account.Services\\Account.Services.csproj"
+            "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Services\\Account.Services.csproj": {
+              "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Services\\Account.Services.csproj"
             }
           }
         }

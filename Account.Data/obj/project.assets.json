@@ -4995,11 +4995,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rina lerner\\source\\repos\\BrixBank\\Account.Data\\Account.Data.csproj",
+      "projectUniqueName": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Data\\Account.Data.csproj",
       "projectName": "Account.Data",
-      "projectPath": "C:\\Users\\rina lerner\\source\\repos\\BrixBank\\Account.Data\\Account.Data.csproj",
+      "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Data\\Account.Data.csproj",
       "packagesPath": "C:\\Users\\rina lerner\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rina lerner\\source\\repos\\BrixBank\\Account.Data\\obj\\",
+      "outputPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rina lerner\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5015,8 +5015,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\rina lerner\\source\\repos\\BrixBank\\Account.Services\\Account.Services.csproj": {
-              "projectPath": "C:\\Users\\rina lerner\\source\\repos\\BrixBank\\Account.Services\\Account.Services.csproj"
+            "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Services\\Account.Services.csproj": {
+              "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Services\\Account.Services.csproj"
             }
           }
         }

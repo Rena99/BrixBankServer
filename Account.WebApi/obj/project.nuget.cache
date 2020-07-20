@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nXkCYOdVT06o0dzMtRU7h6zB68mBZcONosQq63gZiRbFGjv02npOGhyj/oEpEgqQpurcKftUS4kmvUWpUds7Tg==",
+  "dgSpecHash": "4+PpxS56t4eSCsLT2Xry2tlIMcwNSsIJNPq3IacDPAS+DGTGTjSwdipybzkAJ3nXpr0kTq+NULmoF4baqF/uKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rina lerner\\source\\repos\\BrixBank\\Account.WebApi\\Account.WebApi.csproj",
+  "projectFilePath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.WebApi\\Account.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rina lerner\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\rina lerner\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",

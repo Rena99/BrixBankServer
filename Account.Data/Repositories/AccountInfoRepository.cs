@@ -21,9 +21,23 @@ namespace Account.Data.Repositories
 
         public async Task<AccountModel> GetAccount(Guid CustomerId)
         {
-            var account = await _context.Accounts.Include(c=>c.Customer).FirstOrDefaultAsync(c => c.Customer.CustomerId == CustomerId);
-            AccountModel accountModel = _mapper.Map<AccountModel>(account);
-            return accountModel;
+            try
+            {
+                var account = await _context.Accounts.Include(c => c.Customer).FirstOrDefaultAsync(c => c.Customer.CustomerId == CustomerId);
+                AccountModel accountModel = _mapper.Map<AccountModel>(account);
+                if (accountModel != null)
+                {
+                    return accountModel;
+                }
+                else
+                {
+                    throw new Exception("Account not Found");
+                }
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
         }
 
    
