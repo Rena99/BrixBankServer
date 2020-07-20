@@ -1,0 +1,9 @@
+C:\Users\rina lerner\source\repos\BrixBank\Account.Services\bin\Debug\netcoreapp3.1\Account.Services.deps.json
+C:\Users\rina lerner\source\repos\BrixBank\Account.Services\bin\Debug\netcoreapp3.1\Account.Services.dll
+C:\Users\rina lerner\source\repos\BrixBank\Account.Services\bin\Debug\netcoreapp3.1\Account.Services.pdb
+C:\Users\rina lerner\source\repos\BrixBank\Account.Services\obj\Debug\netcoreapp3.1\Account.Services.csprojAssemblyReference.cache
+C:\Users\rina lerner\source\repos\BrixBank\Account.Services\obj\Debug\netcoreapp3.1\Account.Services.AssemblyInfoInputs.cache
+C:\Users\rina lerner\source\repos\BrixBank\Account.Services\obj\Debug\netcoreapp3.1\Account.Services.AssemblyInfo.cs
+C:\Users\rina lerner\source\repos\BrixBank\Account.Services\obj\Debug\netcoreapp3.1\Account.Services.csproj.CoreCompileInputs.cache
+C:\Users\rina lerner\source\repos\BrixBank\Account.Services\obj\Debug\netcoreapp3.1\Account.Services.dll
+C:\Users\rina lerner\source\repos\BrixBank\Account.Services\obj\Debug\netcoreapp3.1\Account.Services.pdb
