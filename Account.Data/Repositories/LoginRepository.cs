@@ -1,11 +1,6 @@
 ﻿using Account.Services.Interfaces;
-using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Configuration;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Account.Data.Repositories

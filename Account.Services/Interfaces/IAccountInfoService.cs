@@ -6,6 +6,6 @@ namespace Account.Services.Interfaces
 {
     public interface IAccountInfoService
     {
-        Task<AccountModel> GetAccount(Guid customerId);
+        Task<AccountModel> GetAccount(Guid accountId);
     }
 }

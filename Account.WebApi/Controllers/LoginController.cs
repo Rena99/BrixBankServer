@@ -1,5 +1,4 @@
-﻿
-using Account.Services.Interfaces;
+﻿using Account.Services.Interfaces;
 using Account.WebApi.DTO;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
@@ -35,23 +34,21 @@ namespace Account.WebApi.Controllers
             {
                 return Unauthorized();
             }
-            
         }
 
         [HttpGet]
         [Route("{action}")]
-        public async Task<IActionResult> GetAccount([FromQuery] string CustomerId)
+        public async Task<IActionResult> GetAccount([FromQuery] string accountId)
         {
             try
             {
-                var account = await _accountInfoService.GetAccount(new Guid(CustomerId));
+                var account = await _accountInfoService.GetAccount(new Guid(accountId));
                 return Ok(_mapper.Map<AccountDTO>(account));
             }
             catch(Exception e)
             {
                 throw e;
             }
-           
         }
     }
 }

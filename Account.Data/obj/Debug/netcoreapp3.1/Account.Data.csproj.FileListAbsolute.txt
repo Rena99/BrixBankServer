@@ -10,3 +10,15 @@ C:\Users\rina lerner\source\repos\BrixBank\Account.Data\obj\Debug\netcoreapp3.1\
 C:\Users\rina lerner\source\repos\BrixBank\Account.Data\obj\Debug\netcoreapp3.1\Account.Data.dll
 C:\Users\rina lerner\source\repos\BrixBank\Account.Data\obj\Debug\netcoreapp3.1\Account.Data.pdb
 C:\Users\rina lerner\source\repos\BrixBank\Account.Data\obj\Debug\netcoreapp3.1\Account.Data.csproj.CoreCompileInputs.cache
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\bin\Debug\netcoreapp3.1\Account.Data.deps.json
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\bin\Debug\netcoreapp3.1\Account.Data.dll
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\bin\Debug\netcoreapp3.1\Account.Data.pdb
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\bin\Debug\netcoreapp3.1\Account.Services.dll
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\bin\Debug\netcoreapp3.1\Account.Services.pdb
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\obj\Debug\netcoreapp3.1\Account.Data.csprojAssemblyReference.cache
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\obj\Debug\netcoreapp3.1\Account.Data.AssemblyInfoInputs.cache
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\obj\Debug\netcoreapp3.1\Account.Data.AssemblyInfo.cs
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\obj\Debug\netcoreapp3.1\Account.Data.csproj.CoreCompileInputs.cache
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\obj\Debug\netcoreapp3.1\Account.Data.csproj.CopyComplete
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\obj\Debug\netcoreapp3.1\Account.Data.dll
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\obj\Debug\netcoreapp3.1\Account.Data.pdb

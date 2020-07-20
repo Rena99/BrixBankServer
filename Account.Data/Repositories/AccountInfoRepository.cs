@@ -3,7 +3,6 @@ using Account.Services.Models;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Account.Data.Repositories
@@ -19,11 +18,11 @@ namespace Account.Data.Repositories
             _context = context;
         }
 
-        public async Task<AccountModel> GetAccount(Guid CustomerId)
+        public async Task<AccountModel> GetAccount(Guid accountId)
         {
             try
             {
-                var account = await _context.Accounts.Include(c => c.Customer).FirstOrDefaultAsync(c => c.Customer.CustomerId == CustomerId);
+                var account = await _context.Accounts.Include(c => c.Customer).FirstOrDefaultAsync(c => c.AccountId == accountId);
                 AccountModel accountModel = _mapper.Map<AccountModel>(account);
                 if (accountModel != null)
                 {
