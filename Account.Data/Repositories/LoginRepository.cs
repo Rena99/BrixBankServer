@@ -18,14 +18,17 @@ namespace Account.Data.Repositories
         {
             try
             {
+                Guid customerId=new Guid();
                 foreach (var item in _context.Customers)
                 {
                     if (item.Email == email && Hashing.AreEqual(password, item.Password, item.Salt))
                     {
-                        var currentAccount = await _context.Accounts.FirstOrDefaultAsync(c => c.CustomerId == item.CustomerId);
-                        return currentAccount.AccountId.ToString();
+                        customerId = item.CustomerId;
+                        break;
                     }
                 }
+                var currentAccount = await _context.Accounts.FirstOrDefaultAsync(c => c.CustomerId == customerId);
+                return currentAccount.AccountId.ToString();
             }
             catch (Exception e)
             {
