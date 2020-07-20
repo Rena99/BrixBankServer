@@ -2,7 +2,9 @@
 using Account.Services.Interfaces;
 using Account.Services.Models;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore.Internal;
 using System;
+using System.Linq;
 
 namespace Account.Data.Repositories
 {
@@ -20,6 +22,10 @@ namespace Account.Data.Repositories
         {
             try
             {
+                if (_context.Customers.ToList().Any(c => c.Email == customerModel.Email))
+                {
+                    return false;
+                }
                 Customer customer = _mapper.Map<Customer>(customerModel);
                 customer.Salt = Hashing.GetSalt();
                 customer.CustomerId = Guid.NewGuid();

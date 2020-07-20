@@ -28,7 +28,8 @@ namespace Account.WebApi.Controllers
         {
             try
             {
-                return Ok(await _loginService.Login(email, password));
+                var account = await _loginService.Login(email, password);
+                return Ok(new { accountId = account });
             }
             catch
             {
