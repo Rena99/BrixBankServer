@@ -130,3 +130,4 @@ C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.WebApi\obj
 C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.WebApi\obj\Debug\netcoreapp3.1\Account.WebApi.dll
 C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.WebApi\obj\Debug\netcoreapp3.1\Account.WebApi.pdb
 C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.WebApi\obj\Debug\netcoreapp3.1\Account.WebApi.genruntimeconfig.cache
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.WebApi\bin\Debug\netcoreapp3.1\Account.Services.dll.config

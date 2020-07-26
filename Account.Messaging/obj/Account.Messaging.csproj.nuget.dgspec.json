@@ -1,0 +1,430 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Messaging\\Account.Messaging.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Data\\Account.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Data\\Account.Data.csproj",
+        "projectName": "Account.Data",
+        "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Data\\Account.Data.csproj",
+        "packagesPath": "C:\\Users\\rina lerner\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rina lerner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Services\\Account.Services.csproj": {
+                "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Services\\Account.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Messaging\\Account.Messaging.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Messaging\\Account.Messaging.csproj",
+        "projectName": "Account.Messaging",
+        "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Messaging\\Account.Messaging.csproj",
+        "packagesPath": "C:\\Users\\rina lerner\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Messaging\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rina lerner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Data\\Account.Data.csproj": {
+                "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Data\\Account.Data.csproj"
+              },
+              "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Services\\Account.Services.csproj": {
+                "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Services\\Account.Services.csproj"
+              },
+              "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Messages\\Messages.csproj": {
+                "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Messages\\Messages.csproj"
+              },
+              "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Transaction.Data\\Transaction.Data.csproj": {
+                "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Transaction.Data\\Transaction.Data.csproj"
+              },
+              "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Transaction.Services\\Transaction.Services.csproj": {
+                "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Transaction.Services\\Transaction.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "NServiceBus": {
+              "target": "Package",
+              "version": "[7.3.0, )"
+            },
+            "NServiceBus.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "NServiceBus.Persistence.Sql": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "NServiceBus.RabbitMQ": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "NServiceBus.SagaAudit": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Services\\Account.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Services\\Account.Services.csproj",
+        "projectName": "Account.Services",
+        "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Services\\Account.Services.csproj",
+        "packagesPath": "C:\\Users\\rina lerner\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Account.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rina lerner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Messages\\Messages.csproj": {
+                "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Messages\\Messages.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Messages\\Messages.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Messages\\Messages.csproj",
+        "projectName": "Messages",
+        "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Messages\\Messages.csproj",
+        "packagesPath": "C:\\Users\\rina lerner\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Messages\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rina lerner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "NServiceBus": {
+              "target": "Package",
+              "version": "[7.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Transaction.Data\\Transaction.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Transaction.Data\\Transaction.Data.csproj",
+        "projectName": "Transaction.Data",
+        "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Transaction.Data\\Transaction.Data.csproj",
+        "packagesPath": "C:\\Users\\rina lerner\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Transaction.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rina lerner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Transaction.Services\\Transaction.Services.csproj": {
+                "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Transaction.Services\\Transaction.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Transaction.Services\\Transaction.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Transaction.Services\\Transaction.Services.csproj",
+        "projectName": "Transaction.Services",
+        "projectPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Transaction.Services\\Transaction.Services.csproj",
+        "packagesPath": "C:\\Users\\rina lerner\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rina lerner\\Documents\\Brix\\FinalBrixProject\\BrixBank\\Transaction.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rina lerner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Account.Services.Interfaces;
 using Account.Services.Models;
 using Account.WebApi.DTO;
@@ -20,11 +21,11 @@ namespace Account.WebApi.Controllers
         }
 
         [HttpPost]
-        public bool PostCustomer([FromBody] CustomerDTO customer)
+        public async Task<bool> PostCustomer([FromBody] CustomerDTO customer)
         {
             try
             {
-               return _service.AddCustomer(_mapper.Map<CustomerModel>(customer));
+               return await _service.AddCustomer(_mapper.Map<VerificationHelperModel>(customer));
             }
             catch(Exception e)
             {

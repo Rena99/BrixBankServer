@@ -1,0 +1,12 @@
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Data\bin\Debug\netcoreapp3.1\Transaction.Data.deps.json
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Data\bin\Debug\netcoreapp3.1\Transaction.Data.dll
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Data\obj\Debug\netcoreapp3.1\Transaction.Data.csprojAssemblyReference.cache
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Data\obj\Debug\netcoreapp3.1\Transaction.Data.AssemblyInfoInputs.cache
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Data\obj\Debug\netcoreapp3.1\Transaction.Data.AssemblyInfo.cs
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Data\bin\Debug\netcoreapp3.1\Transaction.Data.pdb
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Data\obj\Debug\netcoreapp3.1\Transaction.Data.dll
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Data\obj\Debug\netcoreapp3.1\Transaction.Data.pdb
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Data\bin\Debug\netcoreapp3.1\Transaction.Services.dll
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Data\bin\Debug\netcoreapp3.1\Transaction.Services.pdb
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Data\obj\Debug\netcoreapp3.1\Transaction.Data.csproj.CopyComplete
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Data\obj\Debug\netcoreapp3.1\Transaction.Data.csproj.CoreCompileInputs.cache

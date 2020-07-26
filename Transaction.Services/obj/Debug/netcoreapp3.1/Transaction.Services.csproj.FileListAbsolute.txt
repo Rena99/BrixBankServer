@@ -1,0 +1,9 @@
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Services\bin\Debug\netcoreapp3.1\Transaction.Services.deps.json
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Services\bin\Debug\netcoreapp3.1\Transaction.Services.dll
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Services\bin\Debug\netcoreapp3.1\Transaction.Services.pdb
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Services\obj\Debug\netcoreapp3.1\Transaction.Services.csprojAssemblyReference.cache
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Services\obj\Debug\netcoreapp3.1\Transaction.Services.AssemblyInfoInputs.cache
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Services\obj\Debug\netcoreapp3.1\Transaction.Services.AssemblyInfo.cs
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Services\obj\Debug\netcoreapp3.1\Transaction.Services.csproj.CoreCompileInputs.cache
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Services\obj\Debug\netcoreapp3.1\Transaction.Services.dll
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Services\obj\Debug\netcoreapp3.1\Transaction.Services.pdb

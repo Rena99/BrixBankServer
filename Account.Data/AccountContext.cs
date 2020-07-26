@@ -1,6 +1,5 @@
 ﻿using Account.Data.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 namespace Account.Data
 {
@@ -8,6 +7,8 @@ namespace Account.Data
     {
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Entities.Account> Accounts { get; set; }
+        public virtual DbSet<EmailVerification> EmailVerifications { get; set; }
+
 
         public AccountContext()
         {

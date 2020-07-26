@@ -1,0 +1,9 @@
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Messages\bin\Debug\netcoreapp3.1\Messages.deps.json
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Messages\bin\Debug\netcoreapp3.1\Messages.dll
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Messages\obj\Debug\netcoreapp3.1\Messages.csprojAssemblyReference.cache
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Messages\obj\Debug\netcoreapp3.1\Messages.AssemblyInfoInputs.cache
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Messages\obj\Debug\netcoreapp3.1\Messages.AssemblyInfo.cs
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Messages\bin\Debug\netcoreapp3.1\Messages.pdb
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Messages\obj\Debug\netcoreapp3.1\Messages.csproj.CoreCompileInputs.cache
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Messages\obj\Debug\netcoreapp3.1\Messages.dll
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Messages\obj\Debug\netcoreapp3.1\Messages.pdb

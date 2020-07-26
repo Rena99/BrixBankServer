@@ -43,23 +43,23 @@ namespace Account.Tests
             _service = new NewAccountService(newAccountRepository);
         }
 
-        [Fact]
-        public void AddCustomer_New_ReturnTrue()
-        {
-            //Arrange
-            var customerModel = new CustomerModel()
-            {
-                FirstName = "Rachelly",
-                LastName = "Lamberger",
-                Email = "rachelly@gmail.com",
-                Password = "rachelly@brixbank"
-            };
+        //[Fact]
+        //public void AddCustomer_New_ReturnTrue()
+        //{
+        //    //Arrange
+        //    var customerModel = new CustomerModel()
+        //    {
+        //        FirstName = "Rachelly",
+        //        LastName = "Lamberger",
+        //        Email = "rachelly@gmail.com",
+        //        Password = "rachelly@brixbank"
+        //    };
 
-            //Act
-            var result = _service.AddCustomer(customerModel);
+        //    //Act
+        //    var result = _service.AddCustomer(customerModel);
 
-            //Assert
-            Assert.True(result);
-        }
+        //    //Assert
+        //    Assert.True(result);
+        //}
     }
 }

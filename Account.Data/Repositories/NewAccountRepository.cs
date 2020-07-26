@@ -2,9 +2,11 @@
 using Account.Services.Interfaces;
 using Account.Services.Models;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Account.Data.Repositories
 {
@@ -18,15 +20,19 @@ namespace Account.Data.Repositories
             _mapper = mapper;
         }
 
-        public bool AddCustomer(CustomerModel customerModel)
+        public async Task<bool> AddCustomer(VerificationHelperModel customerModel)
         {
             try
             {
-                if (_context.Customers.ToList().Any(c => c.Email == customerModel.Email))
+                EmailVerification emailVerification = await _context.EmailVerifications.FirstOrDefaultAsync(e => e.Email == customerModel.EmailVerification.Email);
+                if (emailVerification.VerificationCode != customerModel.EmailVerification.VerificationCode ||
+                    emailVerification.ExpirationTime.CompareTo(DateTime.Now) > 0)
+                    return false;
+                if (_context.Customers.ToList().Any(c => c.Email == customerModel.Customer.Email))
                 {
                     return false;
                 }
-                Customer customer = _mapper.Map<Customer>(customerModel);
+                Customer customer = _mapper.Map<Customer>(customerModel.Customer);
                 customer.Salt = Hashing.GetSalt();
                 customer.CustomerId = Guid.NewGuid();
                 customer.Password = Hashing.GenerateHash(customer.Password, customer.Salt);
@@ -44,6 +50,26 @@ namespace Account.Data.Repositories
             catch
             {
                 return false;
+            }
+        }
+
+        public int GetEmail(string email)
+        {
+            try
+            {
+                int code = new Random().Next(1000, 9999);
+                _context.EmailVerifications.Add(new EmailVerification()
+                {
+                    Email = email,
+                    VerificationCode = code,
+                    ExpirationTime = DateTime.Now.AddDays(1)
+                });
+                _context.SaveChanges();
+                return code;
+            }
+            catch(Exception e)
+            {
+                throw e;
             }
         }
     }

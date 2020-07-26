@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Account.Data.Entities
 {
-    class Email
+    public class EmailVerification
     {
+        public string Email { get; set; }
+        public int VerificationCode { get; set; }
+        public DateTime ExpirationTime { get; set; }
+
     }
 }

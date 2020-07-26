@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.6" />
+    <PackageReference Include="NServiceBus" Version="7.3.0" />
+    <PackageReference Include="NServiceBus.Extensions.DependencyInjection" Version="1.0.1" />
+    <PackageReference Include="NServiceBus.Persistence.Sql" Version="6.0.2" />
+    <PackageReference Include="NServiceBus.RabbitMQ" Version="6.0.0" />
+    <PackageReference Include="NServiceBus.SagaAudit" Version="3.0.1" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Account.Data\Account.Data.csproj" />
+    <ProjectReference Include="..\Account.Services\Account.Services.csproj" />
+    <ProjectReference Include="..\Messages\Messages.csproj" />
+    <ProjectReference Include="..\Transaction.Data\Transaction.Data.csproj" />
+    <ProjectReference Include="..\Transaction.Services\Transaction.Services.csproj" />
+  </ItemGroup>
+
+</Project>
