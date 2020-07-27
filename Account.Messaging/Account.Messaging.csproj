@@ -12,6 +12,7 @@
     <PackageReference Include="NServiceBus.Persistence.Sql" Version="6.0.2" />
     <PackageReference Include="NServiceBus.RabbitMQ" Version="6.0.0" />
     <PackageReference Include="NServiceBus.SagaAudit" Version="3.0.1" />
+    <PackageReference Include="System.Collections" Version="4.3.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
   </ItemGroup>

@@ -47,7 +47,7 @@ namespace Account.Data.Repositories
                 _context.SaveChanges();
                 return true;
             }
-            catch(Exception e)
+            catch()
             {
                 return false;
             }
@@ -55,23 +55,16 @@ namespace Account.Data.Repositories
 
         public int GetEmail(string email)
         {
-            try
+            int code = new Random().Next(1000, 9999);
+            _context.EmailVerifications.Add(new EmailVerification()
             {
-                int code = new Random().Next(1000, 9999);
-                _context.EmailVerifications.Add(new EmailVerification()
-                {
-                    Email = email,
-                    VerificationCode = code,
-                    ExpirationTime = DateTime.Now.AddDays(1),
-                    EmailVerificationId=Guid.NewGuid()
-                });
-                _context.SaveChanges();
-                return code;
-            }
-            catch(Exception e)
-            {
-                throw e;
-            }
+                Email = email,
+                VerificationCode = code,
+                ExpirationTime = DateTime.Now.AddDays(1),
+                EmailVerificationId = Guid.NewGuid()
+            });
+            _context.SaveChanges();
+            return code;
         }
     }
 }

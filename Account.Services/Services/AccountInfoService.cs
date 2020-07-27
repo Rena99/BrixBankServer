@@ -16,7 +16,14 @@ namespace Account.Services.Services
      
         public async Task<AccountModel> GetAccount(Guid accountId)
         {
-            return await _repository.GetAccount(accountId);
+            if (await _repository.GetAccount(accountId) != null)
+            {
+                return await _repository.GetAccount(accountId);
+            }
+            else
+            {
+                throw new Exception("Account not Found");
+            }
         }
     }
 }

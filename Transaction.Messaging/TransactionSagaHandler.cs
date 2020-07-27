@@ -2,25 +2,16 @@
 using System.Threading.Tasks;
 using Messages;
 using NServiceBus;
-using NServiceBus.Logging;
-using Transaction.Services.Interfaces;
 
 namespace Transaction.Messaging
 {
     public class TransactionSagaHandler: Saga<TransactionSagaHandler.SagaData>,
-                    IAmStartedByMessages<TransactionAdded>,
-                    IHandleMessages<UpdateTransaction>
+                    IAmStartedByMessages<TransactionReceived>,
+                    IHandleMessages<TransactionAdded>,
+                    IHandleMessages<TransactionUpdated>
     {
-        private readonly IUpdateTransactionService _service;
-        static ILog log = LogManager.GetLogger<TransactionSagaHandler>();
-        public TransactionSagaHandler(IUpdateTransactionService service)
+        public Task Handle(TransactionReceived message, IMessageHandlerContext context)
         {
-            _service = service;
-        }
-
-        public Task Handle(TransactionAdded message, IMessageHandlerContext context)
-        {
-            log.Info("transaction added");
             Data.TransactionId = message.TransactionId;
             return context.Send(new AddTransaction() {
                 ToAccount=message.ToAccount,
@@ -30,10 +21,19 @@ namespace Transaction.Messaging
             });
         }
 
-        public Task Handle(UpdateTransaction message, IMessageHandlerContext context)
+        public Task Handle(TransactionAdded message, IMessageHandlerContext context)
         {
-            log.Info("transaction updated");
-            _service.UpdateTransaction(Data.TransactionId, message.Succeeded, message.Message);
+            return context.SendLocal(new UpdateTransaction()
+            {
+                MessageId = message.MessageId,
+                Succeeded = message.Succeeded,
+                Message = message.Message,
+                TransactionId=Data.TransactionId
+            });
+        }
+
+        public Task Handle(TransactionUpdated message, IMessageHandlerContext context)
+        {
             MarkAsComplete();
             return Task.CompletedTask;
         }
@@ -44,6 +44,8 @@ namespace Transaction.Messaging
                 .ToSaga(sagaData => sagaData.SagaId);
             mapper.ConfigureMapping<UpdateTransaction>(message => message.MessageId)
                 .ToSaga(sagaData => sagaData.SagaId);
+            mapper.ConfigureMapping<TransactionUpdated>(message => message.MessageId)
+               .ToSaga(sagaData => sagaData.SagaId);
         }
 
         public class SagaData : ContainSagaData

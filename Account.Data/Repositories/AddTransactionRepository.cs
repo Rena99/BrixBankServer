@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Account.Data.Entities;
 using Account.Services.Interfaces;
-using Messages;
 using Microsoft.EntityFrameworkCore;
 
 namespace Account.Data.Repositories
@@ -15,41 +15,46 @@ namespace Account.Data.Repositories
             _context = context;
         }
 
-        public async Task<string> AddTransaction(Guid fromAccount, Guid toAccount, int amount)
+        public bool CheckAccountExistance(Entities.Account account)
+        {
+            if (account == null)
+            {
+                throw new Exception("No such account found");
+            }
+            return true;
+        }
+
+        public bool CheckBalance(int amount, int balance)
+        {
+            if (amount>=balance)
+            {
+                throw new Exception("Not enough money");
+            }
+            return true;
+        }
+
+        public async Task<int> AddTransaction(Guid fromAccount, Guid toAccount, int amount)
         {
             try
             {
-                Entities.Account FromAccount = await _context.Accounts.FirstOrDefaultAsync(a => a.AccountId == fromAccount);
-                Entities.Account ToAccount = await _context.Accounts.FirstOrDefaultAsync(a => a.AccountId == toAccount);
-                if (FromAccount != null)
+                Entities.Account fAccount = await _context.Accounts.FirstOrDefaultAsync(a => a.AccountId == fromAccount);
+                Entities.Account tAccount = await _context.Accounts.FirstOrDefaultAsync(a => a.AccountId == toAccount);
+                if (!CheckAccountExistance(fAccount) || !CheckAccountExistance(tAccount))
                 {
-                    if (ToAccount != null)
-                    {
-                        if (FromAccount.Balance >= amount)
-                        {
-                            FromAccount.Balance -= amount;
-                            ToAccount.Balance -= amount;
-                            _context.SaveChanges();
-                            return "";
-                        }
-                        else
-                        {
-                            return "Not enough Money in the account";
-                        }
-                    }
-                    else
-                    {
-                        return "To Account Does Not Exist";
-                    }
+                    return 2;
                 }
-                else
+                if (!CheckBalance(amount, fAccount.Balance))
                 {
-                    return "From Account Does Not Exist";
+                    return 2;
                 }
+                fAccount.Balance -= amount;
+                tAccount.Balance -= amount;
+                _context.SaveChangesAsync();
+                return 1;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                return e.Message;
+                throw e;
             }
         }
     }

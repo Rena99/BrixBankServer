@@ -5,6 +5,6 @@ namespace Account.Services.Interfaces
 {
     public interface IAddTransactionRepository
     {
-        Task<string> AddTransaction(Guid fromAccount, Guid toAccount, int amount);
+        Task<int> AddTransaction(Guid fromAccount, Guid toAccount, int amount);
     }
 }

@@ -16,8 +16,6 @@ namespace Account.Data.Repositories
 
         public async Task<string> Login(string email, string password)
         {
-            try
-            {
                 Guid customerId=new Guid();
                 foreach (var item in _context.Customers)
                 {
@@ -25,16 +23,14 @@ namespace Account.Data.Repositories
                     {
                         customerId = item.CustomerId;
                         break;
-                    }
+                    } 
                 }
                 var currentAccount = await _context.Accounts.FirstOrDefaultAsync(c => c.CustomerId == customerId);
+                if (currentAccount == null)
+                {
+                    return null;
+                }
                 return currentAccount.AccountId.ToString();
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            throw new Exception("No such customer");
         }
    }
 }

@@ -19,20 +19,13 @@ namespace Transaction.Data.Repositories
 
         public async Task<Guid> AddTransaction(TransactionModel transactionModel)
         {
-            try
-            {
-                Entities.Transaction transaction = _mapper.Map<Entities.Transaction>(transactionModel);
-                transaction.Date = DateTime.Now;
-                transaction.Status = 0;
-                transaction.TransactionId = Guid.NewGuid();
-                _context.Transactions.Add(transaction);
-                await _context.SaveChangesAsync();
-                return transaction.TransactionId;
-            }
-            catch(Exception e)
-            {
-                throw e;
-            }
+            Entities.Transaction transaction = _mapper.Map<Entities.Transaction>(transactionModel);
+            transaction.Date = DateTime.Now;
+            transaction.Status = 0;
+            transaction.TransactionId = Guid.NewGuid();
+            _context.Transactions.Add(transaction);
+            await _context.SaveChangesAsync();
+            return transaction.TransactionId;
         }
     }
 }

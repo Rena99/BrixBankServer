@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Account.Services.Interfaces;
 using Messages;
 using NServiceBus;
@@ -16,12 +17,14 @@ namespace Account.Messaging
 
         public Task Handle(AddTransaction message, IMessageHandlerContext context)
         {
-            string succeeded = _service.AddTransaction(message.FromAccount, message.ToAccount, message.Amount).Result;
-            return context.Reply(new UpdateTransaction()
+            //use out parameter to get string and return status
+            string errorMessage;
+            int succeeded = _service.AddTransaction(message.FromAccount, message.ToAccount, message.Amount, out errorMessage);
+            return context.Publish(new TransactionAdded()
             {
                 MessageId = message.MessageId,
-                Message = succeeded,
-                Succeeded = succeeded.Length > 0 ? 2 : 1
+                Message = errorMessage,
+                Succeeded = succeeded
             });
         }
     }

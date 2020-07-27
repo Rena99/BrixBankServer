@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Threading.Tasks;
 
 namespace Account.Services.Interfaces
 {
     public interface IAddTransactionService
     {
-        Task<string> AddTransaction(Guid fromAccount, Guid toAccount, int amount);
+        int AddTransaction(Guid fromAccount, Guid toAccount, int amount, out string errorMessage);
     }
 }

@@ -10,7 +10,7 @@ namespace Transaction.WebApi.Mappings
         public AutoMapper()
         {
             CreateMap<TransactionDTO, TransactionModel>();
-            CreateMap<TransactionDTO, TransactionAdded>();
+            CreateMap<TransactionDTO, TransactionReceived>();
             CreateMap<TransactionModel, Data.Entities.Transaction>();
         }
     }

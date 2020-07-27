@@ -47,8 +47,6 @@ namespace Transaction.Messaging
                 {
                     return new SqlConnection(ConfigurationManager.AppSettings["MessagingDB"]);
                 });
-            var routing = transport.Routing();
-            routing.RouteToEndpoint(assembly: typeof(UpdateTransaction).Assembly, destination: "Transaction");
             var endpointInstance = await Endpoint.Start(endpointConfiguration)
                 .ConfigureAwait(false);
             Console.WriteLine("Press Enter to exit.");

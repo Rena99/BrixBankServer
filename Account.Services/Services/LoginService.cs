@@ -1,4 +1,5 @@
 ﻿using Account.Services.Interfaces;
+using System;
 using System.Threading.Tasks;
 
 namespace Account.Services.Services
@@ -14,7 +15,14 @@ namespace Account.Services.Services
 
         public async Task<string> Login(string email, string password)
         {
-          return await _repository.Login(email, password);
+            if (await _repository.Login(email, password) != null)
+            {
+                return await _repository.Login(email, password);
+            }
+            else
+            {
+                throw new Exception("Customer not found");
+            }
         }
     }
 }
