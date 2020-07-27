@@ -27,8 +27,6 @@ namespace Transaction.Messaging
                 options.UseSqlServer(ConfigurationManager.AppSettings["AccountDB"]));
             endpointConfiguration.SendFailedMessagesTo("error");
             endpointConfiguration.AuditProcessedMessagesTo("audit");
-            //endpointConfiguration.AuditSagaStateChanges(
-            //        serviceControlQueue: "Particular.brixbank");
             var recoverability = endpointConfiguration.Recoverability();
             recoverability.Delayed(
                 customizations: delayed =>

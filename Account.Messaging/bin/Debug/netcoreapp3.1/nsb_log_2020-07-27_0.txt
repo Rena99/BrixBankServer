@@ -1,0 +1,10 @@
+﻿2020-07-27 15:20:56.909 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-27 15:20:57.863 INFO  Auditing processed messages to 'audit'
+2020-07-27 15:20:58.815 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-27 15:21:05.857 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-27 16:09:26.469 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-27 16:09:27.050 INFO  Auditing processed messages to 'audit'
+2020-07-27 16:09:27.424 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-27 16:09:32.767 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'

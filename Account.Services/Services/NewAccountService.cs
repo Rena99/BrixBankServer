@@ -22,15 +22,16 @@ namespace Account.Services.Services
             return await _repository.AddCustomer(customerModel);
         }
 
-        public int GetEmail(string email)
+        public void GetEmail(string email)
         {
             try
             {
+                int code= _repository.GetEmail(email);
                 var fromAddress = new MailAddress(ConfigurationManager.AppSettings["Email"], ConfigurationManager.AppSettings["EmailName"]);
                 var toAddress = new MailAddress(email, email);
-                const string fromPassword = "Rena99@Google";
-                const string subject = "Thank You For Deciding to Join Brix Bank";
-                const string body = "In order to successfully join our bank please enter the pin below when prompted. \nRegards,\nBrix Bank ";
+                string fromPassword = ConfigurationManager.AppSettings["Password"];
+                string subject = ConfigurationManager.AppSettings["Subject"];
+                string body = "In order to successfully join our bank please enter the pin below when prompted.\n"+code+" \nRegards,\nBrix Bank ";
                 var smtp = new SmtpClient
                 {
                     Host = "smtp.gmail.com",
@@ -49,7 +50,6 @@ namespace Account.Services.Services
                 {
                     smtp.Send(message);
                 }
-                return _repository.GetEmail(email);
             }
             catch(Exception e)
             {

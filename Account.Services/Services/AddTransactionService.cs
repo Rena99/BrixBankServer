@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Account.Services.Interfaces;
-using Messages;
 
 namespace Account.Services.Services
 {
@@ -13,9 +13,9 @@ namespace Account.Services.Services
             _repository = repository;
         }
 
-        public async Task<UpdateTransaction> AddTransaction(AddTransaction message)
+        public async Task<string> AddTransaction(Guid fromAccount, Guid toAccount, int amount)
         {
-            return await _repository.AddTransaction(message);
+            return await _repository.AddTransaction(fromAccount, toAccount, amount);
         }
     }
 }

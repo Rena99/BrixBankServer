@@ -5,7 +5,6 @@ using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using NServiceBus;
-using Messages;
 
 namespace Transaction.WebApi
 {
@@ -59,7 +58,7 @@ namespace Transaction.WebApi
                endpointConfiguration.SendFailedMessagesTo("error");
                endpointConfiguration.AuditProcessedMessagesTo("audit");
                endpointConfiguration.AuditSagaStateChanges(
-                       serviceControlQueue: "Particular.BrixBank");
+                       serviceControlQueue: "Particular.brixbank");
                var routing = transport.Routing();
                var conventions = endpointConfiguration.Conventions();
                conventions.DefiningCommandsAs(type => type.Namespace == "MessagesClasses.Commands");

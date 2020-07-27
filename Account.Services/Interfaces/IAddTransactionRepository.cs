@@ -1,10 +1,10 @@
-﻿using System.Threading.Tasks;
-using Messages;
+﻿using System;
+using System.Threading.Tasks;
 
 namespace Account.Services.Interfaces
 {
     public interface IAddTransactionRepository
     {
-        Task<UpdateTransaction> AddTransaction(AddTransaction message);
+        Task<string> AddTransaction(Guid fromAccount, Guid toAccount, int amount);
     }
 }

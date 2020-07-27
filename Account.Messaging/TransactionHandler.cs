@@ -2,14 +2,12 @@
 using Account.Services.Interfaces;
 using Messages;
 using NServiceBus;
-using NServiceBus.Logging;
 
 namespace Account.Messaging
 {
     public class TransactionHandler : IHandleMessages<AddTransaction>
     {
         private readonly IAddTransactionService _service;
-        static ILog log = LogManager.GetLogger<TransactionHandler>();
 
         public TransactionHandler(IAddTransactionService service)
         {
@@ -18,10 +16,13 @@ namespace Account.Messaging
 
         public Task Handle(AddTransaction message, IMessageHandlerContext context)
         {
-            log.Info("transaction added");
-            UpdateTransaction succeeded = _service.AddTransaction(message).Result;
-            succeeded.MessageId = message.MessageId;
-            return context.Send(succeeded);
+            string succeeded = _service.AddTransaction(message.FromAccount, message.ToAccount, message.Amount).Result;
+            return context.Reply(new UpdateTransaction()
+            {
+                MessageId = message.MessageId,
+                Message = succeeded,
+                Succeeded = succeeded.Length > 0 ? 2 : 1
+            });
         }
     }
 }

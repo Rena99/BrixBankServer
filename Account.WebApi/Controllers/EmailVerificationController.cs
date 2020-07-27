@@ -1,5 +1,4 @@
 ﻿using Account.Services.Interfaces;
-using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Account.WebApi.Controllers
@@ -16,9 +15,9 @@ namespace Account.WebApi.Controllers
         }
 
         [HttpPost]
-        public int GetEmail([FromBody] string email)
+        public void GetEmail([FromBody] string email)
         {
-            return _service.GetEmail(email);
+            _service.GetEmail(email);
         }
     }
 }

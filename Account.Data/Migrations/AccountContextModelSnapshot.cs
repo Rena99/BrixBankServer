@@ -73,6 +73,26 @@ namespace Account.Data.Migrations
                     b.ToTable("Customers");
                 });
 
+            modelBuilder.Entity("Account.Data.Entities.EmailVerification", b =>
+                {
+                    b.Property<Guid>("EmailVerificationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ExpirationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("VerificationCode")
+                        .HasColumnType("int");
+
+                    b.HasKey("EmailVerificationId");
+
+                    b.ToTable("EmailVerifications");
+                });
+
             modelBuilder.Entity("Account.Data.Entities.Account", b =>
                 {
                     b.HasOne("Account.Data.Entities.Customer", "Customer")

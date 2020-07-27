@@ -26,7 +26,7 @@ namespace Transaction.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<bool> PostTransaction(TransactionDTO transaction)
+        public async Task<bool> PostTransaction([FromBody]TransactionDTO transaction)
         {
             try
             {

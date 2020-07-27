@@ -16,7 +16,7 @@ C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\o
 C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\obj\Debug\netcoreapp3.1\Account.Services.dll
 C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\obj\Debug\netcoreapp3.1\Account.Services.pdb
 C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\bin\Debug\netcoreapp3.1\Account.Services.dll.config
-C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\obj\Debug\netcoreapp3.1\Account.Services.csproj.CoreCompileInputs.cache
 C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\bin\Debug\netcoreapp3.1\Messages.dll
 C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\bin\Debug\netcoreapp3.1\Messages.pdb
 C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\obj\Debug\netcoreapp3.1\Account.Services.csproj.CopyComplete
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\obj\Debug\netcoreapp3.1\Account.Services.csproj.CoreCompileInputs.cache

@@ -6,6 +6,6 @@ namespace Account.Services.Interfaces
     public interface INewAccountService
     {
         Task<bool> AddCustomer(VerificationHelperModel customerModel);
-        int GetEmail(string email);
+        void GetEmail(string email);
     }
 }

@@ -15,47 +15,42 @@ namespace Account.Data.Repositories
             _context = context;
         }
 
-        public async Task<UpdateTransaction> AddTransaction(AddTransaction message)
+        public async Task<string> AddTransaction(Guid fromAccount, Guid toAccount, int amount)
         {
-            UpdateTransaction transaction = new UpdateTransaction
-            {
-                Succeeded = 2
-            };
             try
             {
-                Entities.Account FromAccount = await _context.Accounts.FirstOrDefaultAsync(a => a.AccountId == message.FromAccount);
-                Entities.Account ToAccount = await _context.Accounts.FirstOrDefaultAsync(a => a.AccountId == message.ToAccount);
+                Entities.Account FromAccount = await _context.Accounts.FirstOrDefaultAsync(a => a.AccountId == fromAccount);
+                Entities.Account ToAccount = await _context.Accounts.FirstOrDefaultAsync(a => a.AccountId == toAccount);
                 if (FromAccount != null)
                 {
                     if (ToAccount != null)
                     {
-                        if (FromAccount.Balance >= message.Amount)
+                        if (FromAccount.Balance >= amount)
                         {
-                            FromAccount.Balance -= message.Amount;
-                            ToAccount.Balance -= message.Amount;
+                            FromAccount.Balance -= amount;
+                            ToAccount.Balance -= amount;
                             _context.SaveChanges();
-                            transaction.Succeeded = 1;
+                            return "";
                         }
                         else
                         {
-                            transaction.Message = "Not enough Money in the account";
+                            return "Not enough Money in the account";
                         }
                     }
                     else
                     {
-                        transaction.Message = "To Account Does Not Exist";
+                        return "To Account Does Not Exist";
                     }
                 }
                 else
                 {
-                    transaction.Message = "From Account Does Not Exist";
+                    return "From Account Does Not Exist";
                 }
             }
             catch(Exception e)
             {
-                transaction.Message = e.Message;
+                return e.Message;
             }
-            return transaction;
         }
     }
 }

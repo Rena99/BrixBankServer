@@ -14,6 +14,7 @@ namespace Account.Data.Repositories
     {
         private readonly AccountContext _context;
         private readonly IMapper _mapper;
+
         public NewAccountRepository(AccountContext context, IMapper mapper)
         {
             _context = context;
@@ -24,9 +25,9 @@ namespace Account.Data.Repositories
         {
             try
             {
-                EmailVerification emailVerification = await _context.EmailVerifications.FirstOrDefaultAsync(e => e.Email == customerModel.EmailVerification.Email);
+                EmailVerification emailVerification = await _context.EmailVerifications.FirstOrDefaultAsync(e => e.Email == customerModel.EmailVerification.Email).ConfigureAwait(false);
                 if (emailVerification.VerificationCode != customerModel.EmailVerification.VerificationCode ||
-                    emailVerification.ExpirationTime.CompareTo(DateTime.Now) > 0)
+                    emailVerification.ExpirationTime.CompareTo(DateTime.Now) !< 0)
                     return false;
                 if (_context.Customers.ToList().Any(c => c.Email == customerModel.Customer.Email))
                 {
@@ -44,10 +45,9 @@ namespace Account.Data.Repositories
                     OpenDate=DateTime.Now
                 });
                 _context.SaveChanges();
-                _context.SaveChanges();
                 return true;
             }
-            catch
+            catch(Exception e)
             {
                 return false;
             }
@@ -62,7 +62,8 @@ namespace Account.Data.Repositories
                 {
                     Email = email,
                     VerificationCode = code,
-                    ExpirationTime = DateTime.Now.AddDays(1)
+                    ExpirationTime = DateTime.Now.AddDays(1),
+                    EmailVerificationId=Guid.NewGuid()
                 });
                 _context.SaveChanges();
                 return code;

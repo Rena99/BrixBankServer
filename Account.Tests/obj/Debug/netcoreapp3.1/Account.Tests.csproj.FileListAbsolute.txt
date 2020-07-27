@@ -291,3 +291,6 @@ C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Tests\bin\
 C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Tests\bin\Debug\netcoreapp3.1\Account.Tests.pdb
 C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Tests\obj\Debug\netcoreapp3.1\Account.Tests.genruntimeconfig.cache
 C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Tests\bin\Debug\netcoreapp3.1\Account.Services.dll.config
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Tests\bin\Debug\netcoreapp3.1\NServiceBus.Core.dll
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Tests\bin\Debug\netcoreapp3.1\Messages.dll
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Tests\bin\Debug\netcoreapp3.1\Messages.pdb

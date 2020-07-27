@@ -6,6 +6,7 @@ namespace Transaction.Services.Services
     public class UpdateTransactionService:IUpdateTransactionService
     {
         private readonly IUpdateTransactionRepository _repository;
+
         public UpdateTransactionService(IUpdateTransactionRepository repository)
         {
             _repository = repository;

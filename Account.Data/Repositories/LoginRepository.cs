@@ -32,7 +32,7 @@ namespace Account.Data.Repositories
             }
             catch (Exception e)
             {
-                return (e.Message);
+                throw e;
             }
             throw new Exception("No such customer");
         }
