@@ -2,24 +2,26 @@
 using Account.Services.Interfaces;
 using Messages;
 using NServiceBus;
+using NServiceBus.Logging;
 
 namespace Account.Messaging
 {
     public class TransactionHandler : IHandleMessages<AddTransaction>
     {
-        private readonly ITransactionService _service;
-        public TransactionHandler(ITransactionService service)
+        private readonly IAddTransactionService _service;
+        static ILog log = LogManager.GetLogger<TransactionHandler>();
+
+        public TransactionHandler(IAddTransactionService service)
         {
             _service = service;
         }
-        public async Task<Task> Handle(AddTransaction message, IMessageHandlerContext context)
+
+        public Task Handle(AddTransaction message, IMessageHandlerContext context)
         {
-            int succeeded = await _service.AddTransaction(message);
-            return context.Send(new UpdateTransaction()
-            {
-                MessageId = message.MessageId,
-                Succeeded = succeeded
-            });
+            log.Info("transaction added");
+            UpdateTransaction succeeded = _service.AddTransaction(message).Result;
+            succeeded.MessageId = message.MessageId;
+            return context.Send(succeeded);
         }
     }
 }

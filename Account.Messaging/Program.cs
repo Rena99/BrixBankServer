@@ -2,13 +2,14 @@
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
+using Account.Data;
 using Account.Data.Repositories;
+using Account.Services.Interfaces;
 using Account.Services.Services;
 using Messages;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using NServiceBus;
-using Transaction.Data;
 
 namespace Transaction.Messaging
 {
@@ -20,14 +21,14 @@ namespace Transaction.Messaging
 
             var endpointConfiguration = new EndpointConfiguration("Account");
             var containerSettings = endpointConfiguration.UseContainer(new DefaultServiceProviderFactory());
-            containerSettings.ServiceCollection.AddScoped<Account.Services.Interfaces.ITransactionService, TransactionService>();
-            containerSettings.ServiceCollection.AddScoped<Account.Services.Interfaces.ITransactionRepository, TransactionRepository>();
-            containerSettings.ServiceCollection.AddDbContext<TransactionContext>(options =>
-                options.UseSqlServer(ConfigurationManager.AppSettings["TransactionDB"]));
+            containerSettings.ServiceCollection.AddScoped<IAddTransactionService, AddTransactionService>();
+            containerSettings.ServiceCollection.AddScoped<IAddTransactionRepository, AddTransactionRepository>();
+            containerSettings.ServiceCollection.AddDbContext<AccountContext>(options =>
+                options.UseSqlServer(ConfigurationManager.AppSettings["AccountDB"]));
             endpointConfiguration.SendFailedMessagesTo("error");
             endpointConfiguration.AuditProcessedMessagesTo("audit");
-            endpointConfiguration.AuditSagaStateChanges(
-                    serviceControlQueue: "Particular.brixbank");
+            //endpointConfiguration.AuditSagaStateChanges(
+            //        serviceControlQueue: "Particular.brixbank");
             var recoverability = endpointConfiguration.Recoverability();
             recoverability.Delayed(
                 customizations: delayed =>

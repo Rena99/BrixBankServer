@@ -9,12 +9,10 @@ namespace Account.WebApi.Controllers
     public class EmailVerificationController : ControllerBase
     {
         private readonly INewAccountService _service;
-        private readonly IMapper _mapper;
 
-        public EmailVerificationController(INewAccountService service, IMapper mapper)
+        public EmailVerificationController(INewAccountService service)
         {
             _service = service;
-            _mapper = mapper;
         }
 
         [HttpPost]

@@ -33,6 +33,7 @@ namespace Transaction.WebApi.Controllers
                 Guid guid = await _service.AddTransaction(_mapper.Map<TransactionModel>(transaction));
                 TransactionAdded transactionAdded = _mapper.Map<TransactionAdded>(transaction);
                 transactionAdded.TransactionId = guid;
+                transactionAdded.MessageId = Guid.NewGuid().ToString();
                 await _messageSession.Publish(transactionAdded);
                 return true;
             }

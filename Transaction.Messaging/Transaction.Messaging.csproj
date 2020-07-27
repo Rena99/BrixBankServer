@@ -10,7 +10,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.6" />
     <PackageReference Include="NServiceBus" Version="7.3.0" />
+    <PackageReference Include="NServiceBus.Extensions.DependencyInjection" Version="1.0.1" />
     <PackageReference Include="NServiceBus.Persistence.Sql" Version="6.0.2" />
     <PackageReference Include="NServiceBus.RabbitMQ" Version="6.0.0" />
     <PackageReference Include="NServiceBus.SagaAudit" Version="3.0.1" />
@@ -20,6 +22,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Messages\Messages.csproj" />
+    <ProjectReference Include="..\Transaction.Data\Transaction.Data.csproj" />
+    <ProjectReference Include="..\Transaction.Services\Transaction.Services.csproj" />
   </ItemGroup>
 
 </Project>

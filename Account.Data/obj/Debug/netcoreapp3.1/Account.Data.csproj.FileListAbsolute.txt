@@ -23,3 +23,5 @@ C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\obj\D
 C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\obj\Debug\netcoreapp3.1\Account.Data.dll
 C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\obj\Debug\netcoreapp3.1\Account.Data.pdb
 C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\bin\Debug\netcoreapp3.1\Account.Services.dll.config
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\bin\Debug\netcoreapp3.1\Messages.dll
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\bin\Debug\netcoreapp3.1\Messages.pdb

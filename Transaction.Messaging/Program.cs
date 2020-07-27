@@ -1,9 +1,15 @@
 ﻿using Messages;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using NServiceBus;
 using System;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
+using Transaction.Data;
+using Transaction.Data.Repositories;
+using Transaction.Services.Interfaces;
+using Transaction.Services.Services;
 
 namespace Transaction.Messaging
 {
@@ -14,10 +20,15 @@ namespace Transaction.Messaging
             Console.Title = "Transaction";
 
             var endpointConfiguration = new EndpointConfiguration("Transaction");
+            var containerSettings = endpointConfiguration.UseContainer(new DefaultServiceProviderFactory());
+            containerSettings.ServiceCollection.AddScoped<IUpdateTransactionService, UpdateTransactionService>();
+            containerSettings.ServiceCollection.AddScoped<IUpdateTransactionRepository, UpdateTransactionRepository>();
+            containerSettings.ServiceCollection.AddDbContext<TransactionContext>(options =>
+                options.UseSqlServer(ConfigurationManager.AppSettings["TransactionDB"]));
             endpointConfiguration.SendFailedMessagesTo("error");
             endpointConfiguration.AuditProcessedMessagesTo("audit");
-            endpointConfiguration.AuditSagaStateChanges(
-                    serviceControlQueue: "Particular.brixbank");
+            //endpointConfiguration.AuditSagaStateChanges(
+            //        serviceControlQueue: "Particular.brixbank");
             var recoverability = endpointConfiguration.Recoverability();
             recoverability.Delayed(
                 customizations: delayed =>

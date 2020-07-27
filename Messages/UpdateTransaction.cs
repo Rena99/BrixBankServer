@@ -6,5 +6,6 @@ namespace Messages
     {
         public string MessageId { get; set; }
         public int Succeeded { get; set; }
+        public string Message { get; set; }
     }
 }

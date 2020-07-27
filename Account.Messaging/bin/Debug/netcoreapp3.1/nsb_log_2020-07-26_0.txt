@@ -1,0 +1,37 @@
+﻿2020-07-26 16:20:49.884 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-26 16:20:50.412 INFO  Auditing processed messages to 'audit'
+2020-07-26 16:20:50.651 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-26 16:20:53.612 ERROR Could not complete the installation. 
+System.Data.SqlClient.SqlException (0x80131904): Cannot open database "MessagingDB" requested by the login. The login failed.
+Login failed for user 'DESKTOP-GVJ60P3\rina lerner'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at NServiceBus.Persistence.Sql.ScriptRunner.ExecuteInSeparateConnection[T](Func`6 installAction, String scriptDirectory, String tablePrefix, SqlDialect sqlDialect, Func`2 connectionBuilder) in /_/src/SqlPersistence/ScriptRunner.cs:line 70
+   at NServiceBus.Persistence.Sql.ScriptRunner.Install(SqlDialect sqlDialect, String tablePrefix, Func`2 connectionBuilder, String scriptDirectory, Boolean shouldInstallOutbox, Boolean shouldInstallSagas, Boolean shouldInstallSubscriptions, Boolean shouldInstallTimeouts) in /_/src/SqlPersistence/ScriptRunner.cs:line 48
+   at SqlPersistenceInstaller.Install(String identity) in /_/src/SqlPersistence/NeedToInstallSomething.cs:line 30
+ClientConnectionId:333c55ec-69a4-46c7-b0a5-6b7599a9b1c5
+Error Number:4060,State:1,Class:11
+Exception details:
+	HelpLink.ProdName: Microsoft SQL Server
+	HelpLink.EvtSrc: MSSQLServer
+	HelpLink.EvtID: 4060
+	HelpLink.BaseHelpUrl: https://go.microsoft.com/fwlink
+	HelpLink.LinkId: 20476
+2020-07-26 16:29:08.589 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-26 16:29:09.011 INFO  Auditing processed messages to 'audit'
+2020-07-26 16:29:09.268 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-26 16:29:10.168 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-26 16:34:21.210 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-26 16:34:21.657 INFO  Auditing processed messages to 'audit'
+2020-07-26 16:34:21.982 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-26 16:34:23.003 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-26 16:35:33.455 INFO  transaction added

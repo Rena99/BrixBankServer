@@ -1,0 +1,70 @@
+﻿2020-07-26 16:19:37.990 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-26 16:19:38.370 INFO  Auditing processed messages to 'audit'
+2020-07-26 16:19:38.502 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-26 16:19:41.916 ERROR Could not complete the installation. 
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "MessagingDB" requested by the login. The login failed.
+Login failed for user 'DESKTOP-GVJ60P3\rina lerner'.
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at NServiceBus.Persistence.Sql.ScriptRunner.ExecuteInSeparateConnection[T](Func`6 installAction, String scriptDirectory, String tablePrefix, SqlDialect sqlDialect, Func`2 connectionBuilder) in /_/src/SqlPersistence/ScriptRunner.cs:line 70
+   at NServiceBus.Persistence.Sql.ScriptRunner.Install(SqlDialect sqlDialect, String tablePrefix, Func`2 connectionBuilder, String scriptDirectory, Boolean shouldInstallOutbox, Boolean shouldInstallSagas, Boolean shouldInstallSubscriptions, Boolean shouldInstallTimeouts) in /_/src/SqlPersistence/ScriptRunner.cs:line 48
+   at SqlPersistenceInstaller.Install(String identity) in /_/src/SqlPersistence/NeedToInstallSomething.cs:line 30
+ClientConnectionId:fac36704-a455-4d7f-9856-b43dabf7b320
+Error Number:4060,State:1,Class:11
+Exception details:
+	HelpLink.ProdName: Microsoft SQL Server
+	HelpLink.EvtSrc: MSSQLServer
+	HelpLink.EvtID: 4060
+	HelpLink.BaseHelpUrl: http://go.microsoft.com/fwlink
+	HelpLink.LinkId: 20476
+2020-07-26 16:22:28.554 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-26 16:22:28.948 INFO  Auditing processed messages to 'audit'
+2020-07-26 16:22:29.094 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-26 16:22:31.536 ERROR Could not complete the installation. 
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "MessagingDB" requested by the login. The login failed.
+Login failed for user 'DESKTOP-GVJ60P3\rina lerner'.
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at NServiceBus.Persistence.Sql.ScriptRunner.ExecuteInSeparateConnection[T](Func`6 installAction, String scriptDirectory, String tablePrefix, SqlDialect sqlDialect, Func`2 connectionBuilder) in /_/src/SqlPersistence/ScriptRunner.cs:line 70
+   at NServiceBus.Persistence.Sql.ScriptRunner.Install(SqlDialect sqlDialect, String tablePrefix, Func`2 connectionBuilder, String scriptDirectory, Boolean shouldInstallOutbox, Boolean shouldInstallSagas, Boolean shouldInstallSubscriptions, Boolean shouldInstallTimeouts) in /_/src/SqlPersistence/ScriptRunner.cs:line 48
+   at SqlPersistenceInstaller.Install(String identity) in /_/src/SqlPersistence/NeedToInstallSomething.cs:line 30
+ClientConnectionId:153fb161-bc5c-4856-9f27-b73d8d57c30f
+Error Number:4060,State:1,Class:11
+Exception details:
+	HelpLink.ProdName: Microsoft SQL Server
+	HelpLink.EvtSrc: MSSQLServer
+	HelpLink.EvtID: 4060
+	HelpLink.BaseHelpUrl: http://go.microsoft.com/fwlink
+	HelpLink.LinkId: 20476
+2020-07-26 16:24:27.342 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-26 16:24:27.718 INFO  Auditing processed messages to 'audit'
+2020-07-26 16:24:27.885 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-26 16:24:35.207 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-26 16:25:19.308 WARN  You are using a basic message to do pub/sub. Consider implementing the more specific ICommand and IEvent interfaces on the type 'Messages.TransactionAdded' to help NServiceBus to enforce messaging best practices for you.
+2020-07-26 16:29:20.863 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-26 16:29:21.281 INFO  Auditing processed messages to 'audit'
+2020-07-26 16:29:21.429 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-26 16:29:24.059 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-26 16:29:31.581 WARN  You are using a basic message to do pub/sub. Consider implementing the more specific ICommand and IEvent interfaces on the type 'Messages.TransactionAdded' to help NServiceBus to enforce messaging best practices for you.
+2020-07-26 16:34:31.484 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-26 16:34:31.843 INFO  Auditing processed messages to 'audit'
+2020-07-26 16:34:31.964 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-26 16:34:34.294 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-26 16:34:52.763 WARN  You are using a basic message to do pub/sub. Consider implementing the more specific ICommand and IEvent interfaces on the type 'Messages.TransactionAdded' to help NServiceBus to enforce messaging best practices for you.

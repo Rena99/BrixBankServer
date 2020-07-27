@@ -1,0 +1,426 @@
+﻿2020-07-26 16:18:05.913 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-26 16:18:06.299 INFO  Auditing processed messages to 'audit'
+2020-07-26 16:18:06.538 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-26 16:26:02.627 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-26 16:26:03.357 INFO  Auditing processed messages to 'audit'
+2020-07-26 16:26:03.539 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-26 16:27:38.679 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-26 16:27:39.096 INFO  Auditing processed messages to 'audit'
+2020-07-26 16:27:39.315 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-26 16:27:40.563 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-26 16:27:40.724 INFO  Executing saga creation scripts:
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Sagas\TransactionSagaHandler_Create.sql
+2020-07-26 16:28:27.781 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-26 16:28:28.187 INFO  Auditing processed messages to 'audit'
+2020-07-26 16:28:28.437 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-26 16:28:29.383 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-26 16:28:29.523 INFO  Executing saga creation scripts:
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Sagas\TransactionSagaHandler_Create.sql
+2020-07-26 16:31:14.236 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-26 16:31:14.611 INFO  Auditing processed messages to 'audit'
+2020-07-26 16:31:14.836 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-26 16:31:15.949 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-26 16:31:16.103 INFO  Executing saga creation scripts:
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Sagas\TransactionSagaHandler_Create.sql
+2020-07-26 16:31:17.163 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.MutateIncomingMessageBehavior.InvokeIncomingMessageMutators(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.MutateIncomingTransportMessageBehavior.InvokeIncomingTransportMessagesMutators(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:17.235 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:17.313 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:17.462 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:17.565 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:17.651 WARN  Delayed Retry will reschedule message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' after a delay of 00:00:01 because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:18.843 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:18.949 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:19.046 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:19.115 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:19.255 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:19.377 WARN  Delayed Retry will reschedule message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' after a delay of 00:00:02 because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:21.467 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:21.559 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:21.655 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:21.754 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:21.874 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:22.005 WARN  Delayed Retry will reschedule message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' after a delay of 00:00:03 because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:25.107 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:25.197 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:25.314 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:25.443 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:25.593 INFO  Immediate Retry is going to retry message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' because of an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:31:25.728 ERROR Moving message 'b2ec19cb-f7b0-475d-9ecb-ac0400de57d2' to the error queue 'error' because processing failed due to an exception:
+System.Exception: Message Messages.TransactionAdded mapped to saga Transaction.Messaging.TransactionSagaHandler has attempted to assign null to the correlation property SagaId. Correlation properties cannot be assigned null.
+   at NServiceBus.PropertySagaFinder`1.Find(IBuilder builder, SagaFinderDefinition finderDefinition, SynchronizedStorageSession storageSession, ContextBag context, Object message)
+   at NServiceBus.SagaPersistenceBehavior.Invoke(IInvokeHandlerContext context, Func`2 next)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeSagaNotFoundBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message ID: b2ec19cb-f7b0-475d-9ecb-ac0400de57d2
+2020-07-26 16:34:13.441 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-26 16:34:13.848 INFO  Auditing processed messages to 'audit'
+2020-07-26 16:34:14.021 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-26 16:34:14.917 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-26 16:34:15.092 INFO  Executing saga creation scripts:
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Sagas\TransactionSagaHandler_Create.sql
+2020-07-26 16:34:57.401 INFO  transaction added
+2020-07-26 16:36:14.733 INFO  transaction updated
