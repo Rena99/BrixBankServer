@@ -17,6 +17,7 @@
           "NServiceBus.Persistence.Sql": "6.0.2",
           "NServiceBus.RabbitMQ": "6.0.0",
           "NServiceBus.SagaAudit": "3.0.1",
+          "System.Collections": "4.3.0",
           "System.Configuration.ConfigurationManager": "4.7.0",
           "System.Data.SqlClient": "4.8.1",
           "Transaction.Data": "1.0.0",

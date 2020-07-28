@@ -12,5 +12,6 @@ namespace Transaction.WebApi.DTO
         [Required]
         [Range(1, 1000000)]
         public int Amount { get; set; }
+        public DateTime Date { get; set; }
     }
 }

@@ -30,6 +30,8 @@ namespace Transaction.WebApi
             (options => options.UseSqlServer(Configuration.GetConnectionString("TransactionDB")));
             services.AddScoped<ITransactionService, TransactionService>();
             services.AddScoped<ITransactionRepository, TransactionRepository>();
+            services.AddScoped<ITransactionDetailsService, TransactionDetailsService>();
+            services.AddScoped<ITransactionDetailsRepository, TransactionDetailsRepository>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSwaggerGen(setupAction =>
             {

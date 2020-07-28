@@ -93,6 +93,35 @@ namespace Account.Data.Migrations
                     b.ToTable("EmailVerifications");
                 });
 
+            modelBuilder.Entity("Account.Data.Entities.OperationHistory", b =>
+                {
+                    b.Property<Guid>("OperationHistoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AccountId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Balance")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Debit")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("OperationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("TransactionAmount")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("TransactionId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("OperationHistoryId");
+
+                    b.ToTable("OperationsHistory");
+                });
+
             modelBuilder.Entity("Account.Data.Entities.Account", b =>
                 {
                     b.HasOne("Account.Data.Entities.Customer", "Customer")

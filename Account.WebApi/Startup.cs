@@ -30,6 +30,8 @@ namespace Account.WebApi
             (options => options.UseSqlServer(Configuration.GetConnectionString("AccountDB")));
             services.AddScoped<ILoginService, LoginService>();
             services.AddScoped<ILoginRepository, LoginRepository>();
+            services.AddScoped<IOperationService, OperationService>();
+            services.AddScoped<IOperationRepository, OperationRepository>();
             services.AddScoped<IAccountInfoService, AccountInfoService>();
             services.AddScoped<IAccountInfoRepository, AccountInfoRepository>();
             services.AddScoped<INewAccountService, NewAccountService>();

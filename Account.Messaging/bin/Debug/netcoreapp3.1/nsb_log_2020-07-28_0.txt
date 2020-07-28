@@ -1,0 +1,848 @@
+﻿2020-07-28 15:41:38.697 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 15:41:39.285 INFO  Auditing processed messages to 'audit'
+2020-07-28 15:41:39.598 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 15:41:41.444 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 15:43:18.444 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 15:43:18.999 INFO  Auditing processed messages to 'audit'
+2020-07-28 15:43:19.317 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 15:43:20.710 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 15:57:23.415 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 15:57:23.911 INFO  Auditing processed messages to 'audit'
+2020-07-28 15:57:24.283 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 15:57:25.996 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 16:14:47.576 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 16:14:48.166 INFO  Auditing processed messages to 'audit'
+2020-07-28 16:14:48.726 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 16:14:50.778 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 16:19:02.516 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 16:19:03.795 INFO  Auditing processed messages to 'audit'
+2020-07-28 16:19:05.088 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 16:19:07.815 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 16:31:21.078 WARN  'Account MessagePump' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.IO.BufferedStream.ReadByteSlow()
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(Stream reader)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ReadFrame()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2020-07-28 16:31:21.078 WARN  'Account Publish' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.IO.BufferedStream.ReadByteSlow()
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(Stream reader)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ReadFrame()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2020-07-28 16:31:21.184 WARN  The circuit breaker for 'Account MessagePump' is now in the armed state
+2020-07-28 16:31:21.192 INFO  Attempting to reconnect in 10 seconds.
+2020-07-28 16:31:21.074 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.MutateIncomingMessageBehavior.InvokeIncomingMessageMutators(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.MutateIncomingTransportMessageBehavior.InvokeIncomingTransportMessagesMutators(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:21:11:173623 Z
+	Handler failure time: 2020-07-28 13:31:20:970906 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:31:26.295 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:31:24:154478 Z
+	Handler failure time: 2020-07-28 13:31:26:290942 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:31:29.489 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:31:26:448886 Z
+	Handler failure time: 2020-07-28 13:31:29:484586 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:31:30.644 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:31:29:803533 Z
+	Handler failure time: 2020-07-28 13:31:30:639207 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:31:31.545 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:31:30:791962 Z
+	Handler failure time: 2020-07-28 13:31:31:539245 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:31:31.633 INFO  The circuit breaker for 'Account MessagePump' is now disarmed
+2020-07-28 16:31:32.551 WARN  Delayed Retry will reschedule message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' after a delay of 00:00:01 because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:31:31:700677 Z
+	Handler failure time: 2020-07-28 13:31:32:533254 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:31:33.518 INFO  Connection to the broker reestablished successfully.
+2020-07-28 16:31:33.509 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:31:31:703606 Z
+	Handler failure time: 2020-07-28 13:31:33:489104 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:31:34.470 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:31:33:653012 Z
+	Handler failure time: 2020-07-28 13:31:34:466558 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:31:36.249 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:31:34:620745 Z
+	Handler failure time: 2020-07-28 13:31:35:470943 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:31:36.251 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:31:34:626394 Z
+	Handler failure time: 2020-07-28 13:31:36:246780 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:31:38.038 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:31:36:398779 Z
+	Handler failure time: 2020-07-28 13:31:38:033304 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:31:39.555 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:31:38:042827 Z
+	Handler failure time: 2020-07-28 13:31:39:548470 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:31:40.430 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:31:39:601130 Z
+	Handler failure time: 2020-07-28 13:31:40:426696 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:32:17.416 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:31:40:471801 Z
+	Handler failure time: 2020-07-28 13:32:17:379193 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:32:18.045 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:32:17:416620 Z
+	Handler failure time: 2020-07-28 13:32:18:029401 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:32:20.393 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:32:18:282303 Z
+	Handler failure time: 2020-07-28 13:32:20:303500 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:32:21.523 WARN  Delayed Retry will reschedule message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' after a delay of 00:00:02 because of an exception:
+System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at Microsoft.Data.SqlClient.SqlInternalTransaction.Rollback()
+   at Microsoft.Data.SqlClient.SqlInternalTransaction.Dispose(Boolean disposing)
+   at Microsoft.Data.SqlClient.SqlInternalTransaction.Dispose()
+   at Microsoft.Data.SqlClient.SqlTransaction.Dispose(Boolean disposing)
+   at System.Data.Common.DbTransaction.Dispose()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalTransaction.Dispose()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Dispose()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.Dispose()
+   at Microsoft.EntityFrameworkCore.DbContext.Dispose()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.Dispose()
+   at NServiceBus.Extensions.DependencyInjection.ServiceProviderAdapter.ChildScopeAdapter.Dispose()
+   at NServiceBus.Extensions.DependencyInjection.ContainerAdapter`1.ChildContainerAdapter.Dispose()
+   at NServiceBus.CommonObjectBuilder.DisposeManaged()
+   at NServiceBus.CommonObjectBuilder.Dispose()
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+2020-07-28 16:33:43.117 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:32:23:618940 Z
+	Handler failure time: 2020-07-28 13:33:41:969460 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:33:45.259 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:33:43:456078 Z
+	Handler failure time: 2020-07-28 13:33:45:255398 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:33:47.070 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:33:45:406071 Z
+	Handler failure time: 2020-07-28 13:33:47:061628 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:33:48.000 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:33:47:161428 Z
+	Handler failure time: 2020-07-28 13:33:47:996418 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:33:48.964 INFO  Immediate Retry is going to retry message 'd3ae7989-f7aa-41cd-981e-ac0600dc0c4a' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:33:48:144366 Z
+	Handler failure time: 2020-07-28 13:33:48:960691 Z
+	Message ID: d3ae7989-f7aa-41cd-981e-ac0600dc0c4a
+2020-07-28 16:56:33.127 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 16:56:33.876 INFO  Auditing processed messages to 'audit'
+2020-07-28 16:56:34.311 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 16:56:36.412 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 16:58:00.229 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 16:58:00.697 INFO  Auditing processed messages to 'audit'
+2020-07-28 16:58:00.975 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 16:58:02.171 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 16:58:16.777 INFO  Immediate Retry is going to retry message 'ad43ba7f-7859-4e1a-aace-ac0600e507db' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.MutateIncomingMessageBehavior.InvokeIncomingMessageMutators(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.MutateIncomingTransportMessageBehavior.InvokeIncomingTransportMessagesMutators(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:58:03:118758 Z
+	Handler failure time: 2020-07-28 13:58:16:734732 Z
+	Message ID: ad43ba7f-7859-4e1a-aace-ac0600e507db
+2020-07-28 16:58:21.903 INFO  Immediate Retry is going to retry message 'ad43ba7f-7859-4e1a-aace-ac0600e507db' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:58:16:892729 Z
+	Handler failure time: 2020-07-28 13:58:21:895577 Z
+	Message ID: ad43ba7f-7859-4e1a-aace-ac0600e507db
+2020-07-28 16:59:27.428 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 16:59:27.850 INFO  Auditing processed messages to 'audit'
+2020-07-28 16:59:28.103 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 16:59:29.463 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 16:59:37.727 INFO  Immediate Retry is going to retry message 'ad43ba7f-7859-4e1a-aace-ac0600e507db' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.MutateIncomingMessageBehavior.InvokeIncomingMessageMutators(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.MutateIncomingTransportMessageBehavior.InvokeIncomingTransportMessagesMutators(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:59:30:447451 Z
+	Handler failure time: 2020-07-28 13:59:37:698740 Z
+	Message ID: ad43ba7f-7859-4e1a-aace-ac0600e507db
+2020-07-28 16:59:39.264 INFO  Immediate Retry is going to retry message 'ad43ba7f-7859-4e1a-aace-ac0600e507db' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:59:37:827748 Z
+	Handler failure time: 2020-07-28 13:59:39:258260 Z
+	Message ID: ad43ba7f-7859-4e1a-aace-ac0600e507db
+2020-07-28 16:59:40.649 INFO  Immediate Retry is going to retry message 'ad43ba7f-7859-4e1a-aace-ac0600e507db' because of an exception:
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Account.Data.Repositories.AddHistoryRepository.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Data\Repositories\AddHistoryRepository.cs:line 18
+   at Account.Services.Services.AddHistoryService.AddHistory(Guid fromAccount, Guid toAccount, Int32 amount, Guid transactionId) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Services\Services\AddHistoryService.cs:line 16
+   at Account.Messaging.TransactionHandler.Handle(AddTransaction message, IMessageHandlerContext context) in C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\TransactionHandler.cs:line 25
+   at NServiceBus.Pipeline.MessageHandler.Invoke(Object message, IMessageHandlerContext handlerContext)
+   at NServiceBus.InvokeHandlerTerminator.Terminate(IInvokeHandlerContext context)
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage)
+   at CurrentSessionBehavior.Invoke(IIncomingLogicalMessageContext context, Func`1 next) in /_/src/SqlPersistence/SynchronizedStorage/CurrentSessionBehavior.cs:line 18
+   at NServiceBus.ScheduledTaskHandlingBehavior.Invoke(IIncomingLogicalMessageContext context, Func`2 next)
+   at NServiceBus.DeserializeMessageConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage)
+   at NServiceBus.InvokeAuditPipelineBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next)
+   at NServiceBus.TransportReceiveToPhysicalMessageConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message, Byte[] messageBody) in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 266
+Exception details:
+	Message type: Messages.AddTransaction
+	Handler type: Account.Messaging.TransactionHandler
+	Handler start time: 2020-07-28 13:59:39:376992 Z
+	Handler failure time: 2020-07-28 13:59:40:645784 Z
+	Message ID: ad43ba7f-7859-4e1a-aace-ac0600e507db
+2020-07-28 17:01:51.451 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 17:01:51.901 INFO  Auditing processed messages to 'audit'
+2020-07-28 17:01:52.157 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 17:01:53.288 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 17:15:53.167 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 17:15:53.629 INFO  Auditing processed messages to 'audit'
+2020-07-28 17:15:53.886 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 17:15:55.308 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 17:29:22.357 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 17:29:22.789 INFO  Auditing processed messages to 'audit'
+2020-07-28 17:29:23.017 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 17:29:24.542 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 18:16:33.196 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 18:16:33.790 INFO  Auditing processed messages to 'audit'
+2020-07-28 18:16:34.146 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 18:16:36.012 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 18:21:45.711 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 18:21:46.457 INFO  Auditing processed messages to 'audit'
+2020-07-28 18:21:47.185 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 18:21:50.219 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'

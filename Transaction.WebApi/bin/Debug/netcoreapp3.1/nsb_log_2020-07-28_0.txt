@@ -1,0 +1,101 @@
+﻿2020-07-28 15:52:32.379 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 15:52:32.856 INFO  Auditing processed messages to 'audit'
+2020-07-28 15:52:32.970 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 15:52:35.052 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 15:58:15.787 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 15:58:16.231 INFO  Auditing processed messages to 'audit'
+2020-07-28 15:58:16.436 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 15:58:18.720 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 16:14:54.100 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 16:14:54.441 INFO  Auditing processed messages to 'audit'
+2020-07-28 16:14:54.558 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 16:14:57.484 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 16:15:02.374 WARN  You are using a basic message to do pub/sub. Consider implementing the more specific ICommand and IEvent interfaces on the type 'Messages.TransactionReceived' to help NServiceBus to enforce messaging best practices for you.
+2020-07-28 16:20:17.674 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 16:20:18.019 INFO  Auditing processed messages to 'audit'
+2020-07-28 16:20:18.135 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 16:20:20.252 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 16:21:08.438 WARN  You are using a basic message to do pub/sub. Consider implementing the more specific ICommand and IEvent interfaces on the type 'Messages.TransactionReceived' to help NServiceBus to enforce messaging best practices for you.
+2020-07-28 16:31:21.109 WARN  'TransactionService Publish' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.IO.BufferedStream.ReadByteSlow()
+   at System.IO.BufferedStream.ReadByte()
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(Stream reader)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ReadFrame()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2020-07-28 16:31:21.109 WARN  'TransactionService MessagePump' connection shutdown: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception', classId=0, methodId=0, cause=System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.IO.BufferedStream.ReadByteSlow()
+   at System.IO.BufferedStream.ReadByte()
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(Stream reader)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ReadFrame()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+2020-07-28 16:31:21.215 INFO  Attempting to reconnect in 10 seconds.
+2020-07-28 16:31:22.556 WARN  The circuit breaker for 'TransactionService MessagePump' is now in the armed state
+2020-07-28 16:31:31.614 INFO  The circuit breaker for 'TransactionService MessagePump' is now disarmed
+2020-07-28 16:31:32.577 INFO  Connection to the broker reestablished successfully.
+2020-07-28 16:53:50.363 WARN  You are using a basic message to do pub/sub. Consider implementing the more specific ICommand and IEvent interfaces on the type 'Messages.TransactionReceived' to help NServiceBus to enforce messaging best practices for you.
+2020-07-28 16:56:36.819 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 16:56:37.295 INFO  Auditing processed messages to 'audit'
+2020-07-28 16:56:37.438 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 16:56:40.210 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 16:58:12.952 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 16:58:13.339 INFO  Auditing processed messages to 'audit'
+2020-07-28 16:58:13.459 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 16:58:15.732 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 16:59:55.810 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 16:59:56.651 INFO  Auditing processed messages to 'audit'
+2020-07-28 16:59:56.785 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 16:59:59.098 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 17:00:04.781 WARN  You are using a basic message to do pub/sub. Consider implementing the more specific ICommand and IEvent interfaces on the type 'Messages.TransactionReceived' to help NServiceBus to enforce messaging best practices for you.
+2020-07-28 17:01:11.244 WARN  You are using a basic message to do pub/sub. Consider implementing the more specific ICommand and IEvent interfaces on the type 'Messages.TransactionReceived' to help NServiceBus to enforce messaging best practices for you.
+2020-07-28 17:02:14.929 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 17:02:15.358 INFO  Auditing processed messages to 'audit'
+2020-07-28 17:02:15.483 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 17:02:17.733 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 17:02:22.355 WARN  You are using a basic message to do pub/sub. Consider implementing the more specific ICommand and IEvent interfaces on the type 'Messages.TransactionReceived' to help NServiceBus to enforce messaging best practices for you.
+2020-07-28 17:03:25.499 WARN  You are using a basic message to do pub/sub. Consider implementing the more specific ICommand and IEvent interfaces on the type 'Messages.TransactionReceived' to help NServiceBus to enforce messaging best practices for you.
+2020-07-28 17:03:57.270 WARN  You are using a basic message to do pub/sub. Consider implementing the more specific ICommand and IEvent interfaces on the type 'Messages.TransactionReceived' to help NServiceBus to enforce messaging best practices for you.
+2020-07-28 17:04:47.038 WARN  You are using a basic message to do pub/sub. Consider implementing the more specific ICommand and IEvent interfaces on the type 'Messages.TransactionReceived' to help NServiceBus to enforce messaging best practices for you.
+2020-07-28 17:06:18.763 WARN  You are using a basic message to do pub/sub. Consider implementing the more specific ICommand and IEvent interfaces on the type 'Messages.TransactionReceived' to help NServiceBus to enforce messaging best practices for you.
+2020-07-28 17:06:48.496 WARN  You are using a basic message to do pub/sub. Consider implementing the more specific ICommand and IEvent interfaces on the type 'Messages.TransactionReceived' to help NServiceBus to enforce messaging best practices for you.
+2020-07-28 17:08:38.760 WARN  You are using a basic message to do pub/sub. Consider implementing the more specific ICommand and IEvent interfaces on the type 'Messages.TransactionReceived' to help NServiceBus to enforce messaging best practices for you.
+2020-07-28 17:11:41.699 WARN  You are using a basic message to do pub/sub. Consider implementing the more specific ICommand and IEvent interfaces on the type 'Messages.TransactionReceived' to help NServiceBus to enforce messaging best practices for you.
+2020-07-28 17:13:12.708 WARN  You are using a basic message to do pub/sub. Consider implementing the more specific ICommand and IEvent interfaces on the type 'Messages.TransactionReceived' to help NServiceBus to enforce messaging best practices for you.
+2020-07-28 17:16:13.830 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 17:16:14.199 INFO  Auditing processed messages to 'audit'
+2020-07-28 17:16:14.378 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 17:16:16.991 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 17:16:23.663 WARN  You are using a basic message to do pub/sub. Consider implementing the more specific ICommand and IEvent interfaces on the type 'Messages.TransactionReceived' to help NServiceBus to enforce messaging best practices for you.
+2020-07-28 18:08:09.784 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 18:08:10.141 INFO  Auditing processed messages to 'audit'
+2020-07-28 18:08:10.257 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 18:08:12.218 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 18:16:38.493 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 18:16:38.823 INFO  Auditing processed messages to 'audit'
+2020-07-28 18:16:38.953 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 18:16:42.169 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-07-28 18:21:53.185 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\' with level Info
+2020-07-28 18:21:53.602 INFO  Auditing processed messages to 'audit'
+2020-07-28 18:21:53.757 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-07-28 18:21:56.073 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.WebApi\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'

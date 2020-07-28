@@ -11,6 +11,8 @@ namespace Transaction.WebApi.Mappings
         {
             CreateMap<TransactionDTO, TransactionModel>();
             CreateMap<TransactionDTO, TransactionReceived>();
+            CreateMap<Data.Entities.Transaction, TransactionModel>();
+            CreateMap<TransactionModel, TransactionDTO>();
             CreateMap<TransactionModel, Data.Entities.Transaction>();
         }
     }

@@ -26,7 +26,7 @@ namespace Account.Data.Repositories
 
         public bool CheckBalance(int amount, int balance)
         {
-            if (amount>=balance)
+            if (amount>balance)
             {
                 throw new Exception("Not enough money");
             }
@@ -48,8 +48,8 @@ namespace Account.Data.Repositories
                     return 2;
                 }
                 fAccount.Balance -= amount;
-                tAccount.Balance -= amount;
-                _context.SaveChangesAsync();
+                tAccount.Balance += amount;
+                _context.SaveChanges();
                 return 1;
             }
             catch (Exception e)

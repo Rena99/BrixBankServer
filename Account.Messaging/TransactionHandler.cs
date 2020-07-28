@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Account.Services.Interfaces;
 using Messages;
 using NServiceBus;
@@ -8,18 +7,23 @@ namespace Account.Messaging
 {
     public class TransactionHandler : IHandleMessages<AddTransaction>
     {
-        private readonly IAddTransactionService _service;
+        private readonly IAddTransactionService _transactionService;
+        private readonly IAddHistoryService _historyService;
 
-        public TransactionHandler(IAddTransactionService service)
+        public TransactionHandler(IAddTransactionService transactionService, IAddHistoryService historyService)
         {
-            _service = service;
+            _transactionService = transactionService;
+            _historyService = historyService;
         }
 
         public Task Handle(AddTransaction message, IMessageHandlerContext context)
         {
-            //use out parameter to get string and return status
             string errorMessage;
-            int succeeded = _service.AddTransaction(message.FromAccount, message.ToAccount, message.Amount, out errorMessage);
+            int succeeded = _transactionService.AddTransaction(message.FromAccount, message.ToAccount, message.Amount, out errorMessage);
+            if (succeeded == 1)
+            {
+                _historyService.AddHistory(message.FromAccount, message.ToAccount, message.Amount, message.TransactionId);
+            }
             return context.Publish(new TransactionAdded()
             {
                 MessageId = message.MessageId,

@@ -17,7 +17,8 @@ namespace Transaction.Messaging
                 ToAccount=message.ToAccount,
                 FromAccount=message.FromAccount,
                 Amount=message.Amount,
-                MessageId=message.MessageId
+                MessageId=message.MessageId,
+                TransactionId=message.TransactionId
             });
         }
 
@@ -42,7 +43,7 @@ namespace Transaction.Messaging
         {
             mapper.ConfigureMapping<TransactionAdded>(message => message.MessageId)
                 .ToSaga(sagaData => sagaData.SagaId);
-            mapper.ConfigureMapping<UpdateTransaction>(message => message.MessageId)
+            mapper.ConfigureMapping<TransactionReceived>(message => message.MessageId)
                 .ToSaga(sagaData => sagaData.SagaId);
             mapper.ConfigureMapping<TransactionUpdated>(message => message.MessageId)
                .ToSaga(sagaData => sagaData.SagaId);

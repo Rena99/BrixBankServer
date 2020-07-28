@@ -11,6 +11,8 @@ namespace Account.WebApi.Mappings
         {
             CreateMap<CustomerModel, Customer>();
             CreateMap<Customer, CustomerModel>();
+            CreateMap<OperationHistoryModel, OperationHistoryDTO>();
+            CreateMap<OperationHistory, OperationHistoryModel>();
             CreateMap<Data.Entities.Account, AccountModel>();
             CreateMap<CustomerDTO, VerificationHelperModel>()
                 .ForPath(d => d.Customer.FirstName, a => a.MapFrom(s => s.FirstName))

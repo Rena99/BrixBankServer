@@ -23,6 +23,8 @@ namespace Transaction.Messaging
             var containerSettings = endpointConfiguration.UseContainer(new DefaultServiceProviderFactory());
             containerSettings.ServiceCollection.AddScoped<IAddTransactionService, AddTransactionService>();
             containerSettings.ServiceCollection.AddScoped<IAddTransactionRepository, AddTransactionRepository>();
+            containerSettings.ServiceCollection.AddScoped<IAddHistoryRepository, AddHistoryRepository>();
+            containerSettings.ServiceCollection.AddScoped<IAddHistoryService, AddHistoryService>();
             containerSettings.ServiceCollection.AddDbContext<AccountContext>(options =>
                 options.UseSqlServer(ConfigurationManager.AppSettings["AccountDB"]));
             endpointConfiguration.SendFailedMessagesTo("error");

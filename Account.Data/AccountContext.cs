@@ -8,6 +8,7 @@ namespace Account.Data
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Entities.Account> Accounts { get; set; }
         public virtual DbSet<EmailVerification> EmailVerifications { get; set; }
+        public virtual DbSet<OperationHistory> OperationsHistory { get; set; }
 
 
         public AccountContext()
