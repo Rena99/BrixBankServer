@@ -47,7 +47,7 @@ namespace Account.Data.Repositories
                 _context.SaveChanges();
                 return true;
             }
-            catch()
+            catch
             {
                 return false;
             }

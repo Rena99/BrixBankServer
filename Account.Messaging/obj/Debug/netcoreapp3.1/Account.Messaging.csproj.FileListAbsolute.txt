@@ -78,3 +78,4 @@ C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\
 C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\obj\Debug\netcoreapp3.1\Account.Messaging.dll
 C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\obj\Debug\netcoreapp3.1\Account.Messaging.pdb
 C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\obj\Debug\netcoreapp3.1\Account.Messaging.genruntimeconfig.cache
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Account.Messaging\obj\Debug\netcoreapp3.1\Account.Messaging.csproj.CoreCompileInputs.cache
