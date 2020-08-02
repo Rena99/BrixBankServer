@@ -10,5 +10,6 @@ namespace Account.WebApi.DTO
         public int TransactionAmount { get; set; }
         public int Balance { get; set; }
         public DateTime OperationTime { get; set; }
+        public bool Succeeded { get; set; }
     }
 }

@@ -13,5 +13,7 @@ namespace Transaction.WebApi.DTO
         [Range(1, 1000000)]
         public int Amount { get; set; }
         public DateTime Date { get; set; }
+        public int Status { get; set; }
+        public string FailureReason { get; set; }
     }
 }

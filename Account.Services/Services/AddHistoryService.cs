@@ -11,9 +11,10 @@ namespace Account.Services.Services
         {
             _repository = repository;
         }
-        public void AddHistory(Guid fromAccount, Guid toAccount, int amount, Guid transactionId)
+
+        public void AddHistory(Guid fromAccount, Guid toAccount, int amount, Guid transactionId, bool succeeded)
         {
-            _repository.AddHistory(fromAccount, toAccount, amount, transactionId);
+            _repository.AddHistory(fromAccount, toAccount, amount, transactionId, succeeded);
         }
     }
 }

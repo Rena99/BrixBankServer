@@ -34,7 +34,7 @@ namespace Transaction.Tests
         }
 
         [Fact]
-        public async System.Threading.Tasks.Task AddTransaction_New_ReturnGuid()
+        public void AddTransaction_New_ReturnGuid()
         {
             //Arrange
             var transactionModel = new TransactionModel()
@@ -45,7 +45,7 @@ namespace Transaction.Tests
             };
 
             //Act
-            var result = await _service.AddTransaction(transactionModel);
+            var result = _service.AddTransaction(transactionModel).Result;
 
             //Assert
             Guid guidResult;

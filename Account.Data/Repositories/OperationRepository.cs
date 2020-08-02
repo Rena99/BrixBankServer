@@ -47,6 +47,7 @@ namespace Account.Data.Repositories
 
         public List<OperationHistoryModel> GetSortedList(string sort, int page, int number, Guid accountId)
         {
+            //use dictionary and predicate to sort plus add more than one sorting option
             List<OperationHistory> operationHistories = new List<OperationHistory>();
             if (sort == "date")
             {

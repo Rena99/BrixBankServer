@@ -56,13 +56,16 @@ namespace Account.Data.Repositories
         public int GetEmail(string email)
         {
             int code = new Random().Next(1000, 9999);
-            _context.EmailVerifications.Add(new EmailVerification()
+            EmailVerification emailVerification = _context.EmailVerifications.FirstOrDefault(e => e.Email == email);
+            if (emailVerification == null)
             {
-                Email = email,
-                VerificationCode = code,
-                ExpirationTime = DateTime.Now.AddDays(1),
-                EmailVerificationId = Guid.NewGuid()
-            });
+                emailVerification = new EmailVerification();
+                emailVerification.EmailVerificationId = Guid.NewGuid();
+                emailVerification.Email = email;
+            }
+            emailVerification.VerificationCode = code;
+            emailVerification.ExpirationTime = DateTime.Now.AddMinutes(15);
+            _context.EmailVerifications.Add(emailVerification);
             _context.SaveChanges();
             return code;
         }

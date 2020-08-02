@@ -4,6 +4,6 @@ namespace Account.Services.Interfaces
 {
     public interface IAddHistoryRepository
     {
-        void AddHistory(Guid fromAccount, Guid toAccount, int amount, Guid transactionId);
+        void AddHistory(Guid fromAccount, Guid toAccount, int amount, Guid transactionId, bool succeeded);
     }
 }

@@ -35,16 +35,6 @@ namespace Account.WebApi.Controllers
             }
         }
 
-        private List<OperationHistoryDTO> mapList(List<OperationHistoryModel> historyModels)
-        {
-            List<OperationHistoryDTO> operationHistories = new List<OperationHistoryDTO>();
-            foreach (var item in historyModels)
-            {
-                operationHistories.Add(_mapper.Map<OperationHistoryDTO>(item));
-            }
-            return operationHistories;
-        }
-
         [HttpGet("sort/{page}/{number}")]
         public List<OperationHistoryDTO> GetSortedList([FromQuery] Guid accountId, [FromQuery]string sort, int page, int number)
         {
@@ -71,6 +61,16 @@ namespace Account.WebApi.Controllers
             {
                 throw e;
             }
+        }
+
+        private List<OperationHistoryDTO> mapList(List<OperationHistoryModel> historyModels)
+        {
+            List<OperationHistoryDTO> operationHistories = new List<OperationHistoryDTO>();
+            foreach (var item in historyModels)
+            {
+                operationHistories.Add(_mapper.Map<OperationHistoryDTO>(item));
+            }
+            return operationHistories;
         }
     }
 }

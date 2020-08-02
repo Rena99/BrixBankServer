@@ -111,6 +111,9 @@ namespace Account.Data.Migrations
                     b.Property<DateTime>("OperationTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("Succeeded")
+                        .HasColumnType("bit");
+
                     b.Property<int>("TransactionAmount")
                         .HasColumnType("int");
 

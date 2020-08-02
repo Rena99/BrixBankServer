@@ -8,22 +8,25 @@ namespace Account.Messaging
     public class TransactionHandler : IHandleMessages<AddTransaction>
     {
         private readonly IAddTransactionService _transactionService;
-        private readonly IAddHistoryService _historyService;
 
-        public TransactionHandler(IAddTransactionService transactionService, IAddHistoryService historyService)
+        public TransactionHandler(IAddTransactionService transactionService)
         {
             _transactionService = transactionService;
-            _historyService = historyService;
         }
 
         public Task Handle(AddTransaction message, IMessageHandlerContext context)
         {
             string errorMessage;
             int succeeded = _transactionService.AddTransaction(message.FromAccount, message.ToAccount, message.Amount, out errorMessage);
-            if (succeeded == 1)
+            _ = context.SendLocal(new AddOperation()
             {
-                _historyService.AddHistory(message.FromAccount, message.ToAccount, message.Amount, message.TransactionId);
-            }
+                MessageId = message.MessageId,
+                Amount = message.Amount,
+                FromAccount = message.FromAccount,
+                ToAccount = message.ToAccount,
+                TransactionId = message.TransactionId,
+                Succeeded = succeeded == 1?true:false
+            });
             return context.Publish(new TransactionAdded()
             {
                 MessageId = message.MessageId,

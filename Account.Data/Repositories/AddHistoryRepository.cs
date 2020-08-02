@@ -13,7 +13,8 @@ namespace Account.Data.Repositories
         {
             _context = context;
         }
-        public void AddHistory(Guid fromAccount, Guid toAccount, int amount, Guid transactionId)
+
+        public void AddHistory(Guid fromAccount, Guid toAccount, int amount, Guid transactionId, bool succeeded)
         {
             _context.OperationsHistory.Add(new OperationHistory()
             {
@@ -24,17 +25,22 @@ namespace Account.Data.Repositories
                 Balance = _context.Accounts.FirstOrDefault(a => a.AccountId == fromAccount).Balance,
                 TransactionAmount = amount,
                 TransactionId = transactionId,
+                Succeeded=succeeded
             });
-            _context.OperationsHistory.Add(new OperationHistory()
+             if (succeeded)
             {
-                OperationHistoryId = Guid.NewGuid(),
-                AccountId = toAccount,
-                OperationTime = DateTime.Now,
-                Debit = false,
-                Balance = _context.Accounts.FirstOrDefault(a => a.AccountId == toAccount).Balance,
-                TransactionAmount = amount,
-                TransactionId = transactionId,
-            });
+                _context.OperationsHistory.Add(new OperationHistory()
+                {
+                    OperationHistoryId = Guid.NewGuid(),
+                    AccountId = toAccount,
+                    OperationTime = DateTime.Now,
+                    Debit = false,
+                    Balance = _context.Accounts.FirstOrDefault(a => a.AccountId == toAccount).Balance,
+                    TransactionAmount = amount,
+                    TransactionId = transactionId,
+                    Succeeded=succeeded
+                });
+            }
             _context.SaveChanges();
         }
     }
