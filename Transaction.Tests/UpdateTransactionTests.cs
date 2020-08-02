@@ -1,27 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using AutoMapper;
 using Moq;
 using Transaction.Data;
 using Transaction.Data.Repositories;
 using Transaction.Services.Interfaces;
-using Transaction.Services.Models;
 using Transaction.Services.Services;
 using Xunit;
 
 namespace Transaction.Tests
 {
-    public class TransactionTests
+    public class UpdateTransactionTests
     {
-        private readonly ITransactionService _service;
-        public TransactionTests()
+        private readonly IUpdateTransactionService _service;
+        public UpdateTransactionTests()
         {
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.AddProfile(new WebApi.Mappings.AutoMapper());
-            });
-            var mapper = config.CreateMapper();
             var transactionsData = new List<Data.Entities.Transaction>
             {
                 new Data.Entities.Transaction()
@@ -37,29 +30,27 @@ namespace Transaction.Tests
             }.AsQueryable();
             var context = new Mock<TransactionContext>();
             context.SetupGet(x => x.Transactions).Returns(MockDBSetExtensions.GetDbSet(transactionsData).Object);
-            var transactionRepository = new TransactionRepository(context.Object, mapper);
-            _service = new TransactionService(transactionRepository);
+            var transactionRepository = new UpdateTransactionRepository(context.Object);
+            _service = new UpdateTransactionService(transactionRepository);
         }
 
         [Fact]
-        public void AddTransaction_New_ReturnGuidAsync()
+        public void UpdateTransaction_Exists_ReturnsVoid()
         {
             //Arrange
-            var transactionModel = new TransactionModel()
-            {
-                FromAccount = Guid.NewGuid(),
-                ToAccount = Guid.NewGuid(),
-                Amount = 20000,
-            };
+            var transactionId = Guid.Parse("96DAF25B-F86A-4A76-8E03-91B9C1AA7C6C");
+            var succeeded = 1;
+            var message = "";
 
             //Act
-            var result = _service.AddTransaction(transactionModel).Result;
-
-            //Assert
-            Guid guidResult;
-            Assert.True(Guid.TryParse(result.ToString(), out guidResult));
+            try
+            {
+                _service.UpdateTransaction(transactionId, succeeded, message);
+            }
+            catch(Exception e)
+            {
+                Assert.NotEqual("Exception of type was thrown", e.Message);
+            }
         }
     }
 }
-
-

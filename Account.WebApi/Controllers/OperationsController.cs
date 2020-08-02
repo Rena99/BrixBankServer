@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Account.Services.Interfaces;
 using Account.Services.Models;
 using Account.WebApi.DTO;
@@ -22,11 +23,11 @@ namespace Account.WebApi.Controllers
         }
 
         [HttpGet("{page}/{number}")]
-        public List<OperationHistoryDTO> GetOperations(int page, int number, [FromQuery] Guid accountId)
+        public async Task<List<OperationHistoryDTO>> GetOperations(int page, int number, [FromQuery] Guid accountId)
         {
             try
             {
-                List<OperationHistoryModel> historyModels = _service.GetOperations(page, number, accountId);
+                List<OperationHistoryModel> historyModels = await _service.GetOperations(page, number, accountId);
                 return mapList(historyModels);
             }
             catch (Exception e)
@@ -36,11 +37,11 @@ namespace Account.WebApi.Controllers
         }
 
         [HttpGet("sort/{page}/{number}")]
-        public List<OperationHistoryDTO> GetSortedList([FromQuery] Guid accountId, [FromQuery]string sort, int page, int number)
+        public async Task<List<OperationHistoryDTO>> GetSortedList([FromQuery] Guid accountId, [FromQuery]string sort, int page, int number)
         {
             try
             {
-                List<OperationHistoryModel> historyModels = _service.GetSortedList(sort, page, number, accountId);
+                List<OperationHistoryModel> historyModels = await _service.GetSortedList(sort, page, number, accountId);
                 return mapList(historyModels);
             }
             catch (Exception e)
@@ -50,11 +51,11 @@ namespace Account.WebApi.Controllers
         }
 
         [HttpGet("filter/{page}/{number}")]
-        public List<OperationHistoryDTO> GetFilteredList([FromQuery] Guid accountId, [FromQuery]DateTime from, [FromQuery] DateTime to, int page, int number)
+        public async Task<List<OperationHistoryDTO>> GetFilteredList([FromQuery] Guid accountId, [FromQuery]DateTime from, [FromQuery] DateTime to, int page, int number)
         {
             try
             {
-                List<OperationHistoryModel> historyModels = _service.GetFilteredList(from, to, page, number, accountId);
+                List<OperationHistoryModel> historyModels = await _service.GetFilteredList(from, to, page, number, accountId);
                 return mapList(historyModels);
             }
             catch (Exception e)

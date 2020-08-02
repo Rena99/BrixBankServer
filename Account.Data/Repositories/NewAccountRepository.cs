@@ -62,10 +62,10 @@ namespace Account.Data.Repositories
                 emailVerification = new EmailVerification();
                 emailVerification.EmailVerificationId = Guid.NewGuid();
                 emailVerification.Email = email;
+                _context.EmailVerifications.Add(emailVerification);
             }
             emailVerification.VerificationCode = code;
             emailVerification.ExpirationTime = DateTime.Now.AddMinutes(15);
-            _context.EmailVerifications.Add(emailVerification);
             _context.SaveChanges();
             return code;
         }

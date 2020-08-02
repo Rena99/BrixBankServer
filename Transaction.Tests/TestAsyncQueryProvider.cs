@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 
-namespace Account.Tests
+namespace Transaction.Tests
 {
     internal class TestAsyncQueryProvider<TEntity> : IAsyncQueryProvider
     {

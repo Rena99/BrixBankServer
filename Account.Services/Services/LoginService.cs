@@ -15,14 +15,12 @@ namespace Account.Services.Services
 
         public async Task<string> Login(string email, string password)
         {
-            if (await _repository.Login(email, password) != null)
-            {
-                return await _repository.Login(email, password);
-            }
-            else
+            string accountId= await _repository.Login(email, password);
+            if(accountId==null)
             {
                 throw new Exception("Customer not found");
             }
+            return accountId;
         }
     }
 }

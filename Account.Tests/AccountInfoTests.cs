@@ -8,7 +8,6 @@ using Account.Services.Interfaces;
 using Account.Services.Models;
 using Account.Services.Services;
 using AutoMapper;
-using Microsoft.EntityFrameworkCore;
 using Moq;
 using Xunit;
 
@@ -36,26 +35,16 @@ namespace Account.Tests
             {
                 new EmailVerification {Email="rachelly@gmail.com", VerificationCode=1234, ExpirationTime=DateTime.Now.AddDays(1) },
             }.AsQueryable();
-            //var customers = new Mock<DbSet<Customer>>();
-            //customers.SetSource(customersData);
-            //var accounts = new Mock<DbSet<Data.Entities.Account>>();
-            //accounts.SetSource(accountsData);
-            //var emailVerifications = new Mock<DbSet<EmailVerification>>();
-            //emailVerifications.SetSource(emailVerificationsData);
             var context = new Mock<AccountContext>();
             context.SetupGet(x => x.Customers).Returns(MockDBSetExtensions.GetDbSet(customersData).Object);
             context.SetupGet(x => x.Accounts).Returns(MockDBSetExtensions.GetDbSet(accountsData).Object);
             context.SetupGet(x => x.EmailVerifications).Returns(MockDBSetExtensions.GetDbSet(emailVerificationsData).Object);
-
-            //context.Setup(m => m.Accounts).Returns(accounts.Object);
-            //context.Setup(m => m.Customers).Returns(customers.Object);
-            //context.Setup(m => m.EmailVerifications).Returns(emailVerifications.Object);
             var accountInfoRepository = new AccountInfoRepository(context.Object, mapper);
             _service = new AccountInfoService(accountInfoRepository);
         }
 
         [Fact]
-        public void GetAccount_Exists_ReturnAccounModel()
+        public void GetAccount_Exists_ReturnAccounModelAsync()
         {
             //Arrange
             var accountId = new Guid("9CFE55DF-65E2-4204-BAD5-08D82BD21687");

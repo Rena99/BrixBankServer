@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Account.Services.Interfaces;
 using Account.Services.Models;
 
@@ -14,19 +15,19 @@ namespace Account.Services.Services
             _repository = repository;
         }
 
-        public List<OperationHistoryModel> GetFilteredList(DateTime from, DateTime to, int page, int number, Guid accountId)
+        public async Task<List<OperationHistoryModel>> GetFilteredList(DateTime from, DateTime to, int page, int number, Guid accountId)
         {
-            return _repository.GetFilteredList(from, to, page, number, accountId);
+            return await _repository.GetFilteredList(from, to, page, number, accountId);
         }
 
-        public List<OperationHistoryModel> GetOperations(int page, int number, Guid accountId)
+        public async Task<List<OperationHistoryModel>> GetOperations(int page, int number, Guid accountId)
         {
-            return _repository.GetOperations(page, number, accountId);
+            return await _repository.GetOperations(page, number, accountId);
         }
 
-        public List<OperationHistoryModel> GetSortedList(string sort, int page, int number, Guid accountId)
+        public async Task<List<OperationHistoryModel>> GetSortedList(string sort, int page, int number, Guid accountId)
         {
-            return _repository.GetSortedList(sort, page, number, accountId);
+            return await _repository.GetSortedList(sort, page, number, accountId);
         }
     }
 }

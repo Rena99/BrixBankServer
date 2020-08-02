@@ -1,0 +1,28 @@
+﻿2020-08-02 11:44:06.037 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-08-02 11:44:06.688 INFO  Auditing processed messages to 'audit'
+2020-08-02 11:44:07.080 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-08-02 11:44:09.619 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-08-02 11:44:09.767 INFO  Executing saga creation scripts:
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Sagas\TransactionSagaHandler_Create.sql
+2020-08-02 11:45:23.832 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-08-02 11:45:24.313 INFO  Auditing processed messages to 'audit'
+2020-08-02 11:45:24.634 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-08-02 11:45:28.779 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-08-02 11:45:28.953 INFO  Executing saga creation scripts:
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Sagas\TransactionSagaHandler_Create.sql
+2020-08-02 11:46:27.888 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-08-02 11:46:28.338 INFO  Auditing processed messages to 'audit'
+2020-08-02 11:46:28.605 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-08-02 11:46:30.244 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-08-02 11:46:30.375 INFO  Executing saga creation scripts:
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Sagas\TransactionSagaHandler_Create.sql
+2020-08-02 16:13:41.661 INFO  Logging to 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\' with level Info
+2020-08-02 16:13:42.329 INFO  Auditing processed messages to 'audit'
+2020-08-02 16:13:42.632 INFO  Selected active license from C:\Users\rina lerner\AppData\Local\ParticularSoftware\license.xml
+License Expiration: 2020-10-05
+2020-08-02 16:13:44.671 INFO  Executing 'C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Outbox_Create.sql'
+2020-08-02 16:13:45.127 INFO  Executing saga creation scripts:
+C:\Users\rina lerner\Documents\Brix\FinalBrixProject\BrixBank\Transaction.Messaging\bin\Debug\netcoreapp3.1\NServiceBus.Persistence.Sql\MsSqlServer\Sagas\TransactionSagaHandler_Create.sql

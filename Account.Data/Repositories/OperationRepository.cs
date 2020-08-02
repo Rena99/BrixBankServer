@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Account.Data.Entities;
 using Account.Services.Interfaces;
 using Account.Services.Models;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 
 namespace Account.Data.Repositories
 {
@@ -19,11 +21,11 @@ namespace Account.Data.Repositories
             _context = context;
         }
 
-        public List<OperationHistoryModel> GetOperations(int page, int number, Guid accountId)
+        public async Task<List<OperationHistoryModel>> GetOperations(int page, int number, Guid accountId)
         {
-            List<OperationHistory> operationHistories = _context.OperationsHistory
+            List<OperationHistory> operationHistories = await _context.OperationsHistory
                 .Where(p => p.AccountId == accountId)
-                .Skip(page * number).Take(number).ToList();
+                .Skip(page * number).Take(number).ToListAsync();
             return mapList(operationHistories);
         }
 
@@ -37,45 +39,44 @@ namespace Account.Data.Repositories
             return historyModels;
         }
 
-        public List<OperationHistoryModel> GetFilteredList(DateTime from, DateTime to, int page, int number, Guid accountId)
+        public async Task<List<OperationHistoryModel>> GetFilteredList(DateTime from, DateTime to, int page, int number, Guid accountId)
         {
-            List<OperationHistory> operationHistories = _context.OperationsHistory
+            List<OperationHistory> operationHistories = await _context.OperationsHistory
                 .Where(p => p.OperationTime.CompareTo(from) >= 0 && p.OperationTime.CompareTo(to) < 0 && p.AccountId == accountId)
-                .Skip(page * number).Take(number).ToList();
+                .Skip(page * number).Take(number).ToListAsync();
             return mapList(operationHistories);
         }
 
-        public List<OperationHistoryModel> GetSortedList(string sort, int page, int number, Guid accountId)
+        public async Task<List<OperationHistoryModel>> GetSortedList(string sort, int page, int number, Guid accountId)
         {
-            //use dictionary and predicate to sort plus add more than one sorting option
             List<OperationHistory> operationHistories = new List<OperationHistory>();
-            if (sort == "date")
+            switch (sort)
             {
-               operationHistories = _context.OperationsHistory
-                               .Where(p=>p.AccountId== accountId)
+                case "date":
+                    operationHistories = await _context.OperationsHistory
+                               .Where(p => p.AccountId == accountId)
                                .OrderByDescending(p => p.OperationTime)
-                               .Skip(page * number).Take(number).ToList();
-            }
-            else if (sort == "amount")
-            {
-                operationHistories = _context.OperationsHistory
+                               .Skip(page * number).Take(number).ToListAsync();
+                    break;
+                case "amount": 
+                    operationHistories = await _context.OperationsHistory
                                .Where(p => p.AccountId == accountId)
                                .OrderBy(p => p.TransactionAmount)
-                               .Skip(page * number).Take(number).ToList();
-            }
-            else if (sort == "balance")
-            {
-                operationHistories = _context.OperationsHistory
-                               .Where(p => p.AccountId == accountId)
-                               .OrderBy(p => p.Balance)
-                               .Skip(page * number).Take(number).ToList();
-            }
-            else if (sort == "debit")
-            {
-                operationHistories = _context.OperationsHistory
-                                .Where(p => p.AccountId == accountId)
-                               .OrderBy(p => p.Debit)
-                               .Skip(page * number).Take(number).ToList();
+                               .Skip(page * number).Take(number).ToListAsync();
+                    break;
+                case "balance":
+                        operationHistories = await _context.OperationsHistory
+                                       .Where(p => p.AccountId == accountId)
+                                       .OrderBy(p => p.Balance)
+                                       .Skip(page * number).Take(number).ToListAsync();
+                    break;
+
+                default:
+                    operationHistories = await _context.OperationsHistory
+                           .Where(p => p.AccountId == accountId)
+                          .OrderBy(p => p.Debit)
+                          .Skip(page * number).Take(number).ToListAsync();
+                    break;
             }
             return mapList(operationHistories);
         }

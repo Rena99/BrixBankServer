@@ -2572,7 +2572,8 @@
           "AutoMapper": "10.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.6",
           "Microsoft.EntityFrameworkCore.Relational": "3.1.6",
-          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.6"
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.6",
+          "System.Collections": "4.3.0"
         },
         "compile": {
           "bin/placeholder/Account.Data.dll": {}
